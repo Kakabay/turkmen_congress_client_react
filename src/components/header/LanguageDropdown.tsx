@@ -31,8 +31,8 @@ const LanguageDropdown = () => {
     <div>
       <DropdownMenu modal={false}>
         <DropdownMenuTrigger className="flex gap-[4px] focus:outline-none">
-          <span className="font-14-regular">{activeLang.view}</span>{' '}
-          <ChevronDown className="text-onAnySurface" />
+          <span className="font-14-regular text-inherit">{activeLang.view}</span>{' '}
+          <ChevronDown className="text-inherit" />
         </DropdownMenuTrigger>
         <DropdownMenuContent className="bg-surfaceContainerLow border border-surfaceContainerLowOutline p-0 rounded-sm">
           {languages

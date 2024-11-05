@@ -10,8 +10,8 @@ interface Store {
 
 export const useZusLang = create<Store>((set) => ({
   activeLang: {
-    view: 'Русский',
-    value: 'ru',
+    view: 'English',
+    value: 'en',
   },
   setActiveLang: (value) => set((state) => ({ activeLang: (state.activeLang = value) })),
 }));

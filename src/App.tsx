@@ -1,8 +1,11 @@
-import { useState } from 'react';
 import Container from './components/global/Container';
 import Header from './components/header/Header';
-import ServiceCard from './components/global/ServiceCard';
 import ServicesSection from './components/services/ServicesSection';
+import HeroSection from './components/hero/HeroSection';
+import EventsSection from './components/events/EventsSection';
+import AboutSection from './components/about/AboutSection';
+import { Form } from './components/ui/form';
+import ContactForm from './components/contact/ContactForm';
 
 interface LanguageItem {
   name: string;
@@ -83,123 +86,121 @@ function App() {
     <>
       <Header />
       <main className="flex flex-col gap-[200px] w-full">
-        <section className="hero bg-hero-img w-full h-[996px]">
-          <Container>
-            <div className="h-[996px] w-full relative flex flex-col justify-end pb-2 gap-2">
-              <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[848px] w-full font-80-medium">
-                Professional events with a personal touch
-              </h1>
-              <div className="flex w-full justify-between items-end">
-                <span className="font-14-regular">Turkmenistan, Ashgabat</span>
-                <span className="font-18-regular">
-                  Make your event: Innovative technologies, creative formats.
-                </span>
-              </div>
-              <div className="flex flex-col items-center justify-center gap-1">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M12 4C12.5523 4 13 4.44772 13 5V16.5858L18.2929 11.2929C18.6834 10.9024 19.3166 10.9024 19.7071 11.2929C20.0976 11.6834 20.0976 12.3166 19.7071 12.7071L12.7071 19.7071C12.3166 20.0976 11.6834 20.0976 11.2929 19.7071L4.29289 12.7071C3.90237 12.3166 3.90237 11.6834 4.29289 11.2929C4.68342 10.9024 5.31658 10.9024 5.70711 11.2929L11 16.5858V5C11 4.44772 11.4477 4 12 4Z"
-                    fill="#AAB8BD"
-                  />
-                </svg>
-                <span className="text-onAnySurfaceVariant text-[12px] font-medium">
-                  Click here or scroll down
-                </span>
-              </div>
-            </div>
-          </Container>
-        </section>
+        <HeroSection />
 
-        <section className="events">
-          <Container>
-            <div className="flex flex-col gap-[38px]">
-              <h2 className="font-64-regular">Upcoming event</h2>
-              <div className="bg-surfaceContainerLow p-8 rounded-sm border border-surfaceContainerLowOutline flex justify-between gap-8">
-                <div className=" flex flex-col  w-full justify-between">
-                  <div className="flex flex-col gap-2">
-                    <span className="font-14-medium">Global forum</span>
-                    <h3 className="mb-2 font-36-medium">
-                      Commercial, Investment and Business pportunities in Turkmenistan 2024
-                    </h3>
-                    <span className="font-20-medium">7-8 November 2024 - Abu Dhabi, UAE</span>
-                  </div>
-                  <div className="flex w-full justify-between items-end">
-                    <div className="flex flex-col gap-1">
-                      <span className="font-14-regular text-onAnySurfaceVariant">Organizers:</span>
-                      <div className="h-[64px] w-[221px]">
-                        <img
-                          src="/organizers.png"
-                          alt=""
-                          className="w-full h-full object-contain"
-                        />
-                      </div>
-                    </div>
-                    <div className="flex flex-col gap-1 w-[203px]">
-                      <span className="font-14-regular text-onAnySurfaceVariant">
-                        Co-organizer:
-                      </span>
-                      <div className="w-[173px] h-[64px]">
-                        <img
-                          src="/congress_logo.svg"
-                          alt=""
-                          className="w-full h-full object-contain"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="max-w-[480px] max-h-[270px] h-full w-full rounded-[2px] overflow-hidden">
-                  <img
-                    src="/card.jpg"
-                    alt=""
-                    className="rounded-[2px] w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-          </Container>
-        </section>
+        <EventsSection />
+
+        <div id="services"></div>
 
         <ServicesSection />
 
-        <section className="about">
+        <div id="about"></div>
+
+        <AboutSection />
+
+        <div id="contact"></div>
+
+        <section className="contact bg-surfaceContainer py-[64px]">
           <Container>
             <div className="flex flex-col gap-8">
-              <h2 className="font-64-regular">General partner —</h2>
-              <div className="flex justify-between items-end pb-8 border-b border-outline gap-8">
-                <div className="rounded-[4px] overflow-hidden w-[369px] h-[260px] ml-[110px]">
-                  <img
-                    src="/partners.png"
-                    alt=""
-                    className="rounded-[4px] w-full h-full object-cover"
-                  />
-                </div>
-                <div className="flex flex-col gap-8">
-                  <div>
-                    <img src="/nelson.svg" alt="nelsonsmith" />
-                  </div>
-                  <p className="font-18-regular max-w-[628px] w-full text-onAnySurfaceVariant">
-                    Nielsonsmith is a highly specialised trade compliance focused international
-                    organisation, working closely with the compliance community to create assemblies
-                    that are produced through co operation with senior executives and leading
-                    analysts, to provide real insight and form a single point for the industry to
-                    meet, share ideas and experiences on a neutral platform. We are the compliance
-                    conference company.
+              <h2 className="font-64-regular">Contact us via our contact form</h2>
+              <div className="flex justify-between gap-6">
+                <div className="flex flex-col gap-10 max-w-[527px] w-full">
+                  <p className="font-18-regular text-onAnySurfaceVariant">
+                    Contact with us today to discuss opportunities for collaboration to enhance your
+                    industry standing — whether through speaking engagements, partnerships, or
+                    attending our events.
                   </p>
+                  <div className="flex flex-col gap-4">
+                    <div className="flex items-center gap-4">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M21.9999 16.9201V19.9201C22.0011 20.1986 21.944 20.4743 21.8324 20.7294C21.7209 20.9846 21.5572 21.2137 21.352 21.402C21.1468 21.5902 20.9045 21.7336 20.6407 21.8228C20.3769 21.912 20.0973 21.9452 19.8199 21.9201C16.7429 21.5854 13.7871 20.5339 11.1899 18.8501C8.77376 17.3148 6.72527 15.2663 5.18993 12.8501C3.50025 10.2411 2.44854 7.27101 2.11993 4.1801C2.09494 3.90356 2.12781 3.62486 2.21643 3.36172C2.30506 3.09859 2.4475 2.85679 2.6347 2.65172C2.82189 2.44665 3.04974 2.28281 3.30372 2.17062C3.55771 2.05843 3.83227 2.00036 4.10993 2.0001H7.10993C7.59524 1.99532 8.06572 2.16718 8.43369 2.48363C8.80166 2.80008 9.04201 3.23954 9.10993 3.7201C9.23622 4.68023 9.47105 5.62293 9.80993 6.5301C9.94448 6.88802 9.9736 7.27701 9.89384 7.65098C9.81408 8.02494 9.6288 8.36821 9.35993 8.6401L8.08993 9.9101C9.51349 12.4136 11.5864 14.4865 14.0899 15.9101L15.3599 14.6401C15.6318 14.3712 15.9751 14.1859 16.3491 14.1062C16.723 14.0264 17.112 14.0556 17.4699 14.1901C18.3771 14.529 19.3198 14.7638 20.2799 14.8901C20.7657 14.9586 21.2093 15.2033 21.5265 15.5776C21.8436 15.9519 22.0121 16.4297 21.9999 16.9201Z"
+                          stroke="#CFD3D4"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                      <span className="font-16-regular">993 62 62 00 40</span>
+                    </div>
+                    <div className="flex items-center gap-4">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M20 4H4C2.89543 4 2 4.89543 2 6V18C2 19.1046 2.89543 20 4 20H20C21.1046 20 22 19.1046 22 18V6C22 4.89543 21.1046 4 20 4Z"
+                          stroke="#CFD3D4"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path
+                          d="M22 7L13.03 12.7C12.7213 12.8934 12.3643 12.996 12 12.996C11.6357 12.996 11.2787 12.8934 10.97 12.7L2 7"
+                          stroke="#CFD3D4"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+
+                      <span className="font-16-regular">info@turkmencongress.com</span>
+                    </div>
+                    <div className="flex items-center gap-4">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M20 10C20 14.993 14.461 20.193 12.601 21.799C12.4277 21.9293 12.2168 21.9998 12 21.9998C11.7832 21.9998 11.5723 21.9293 11.399 21.799C9.539 20.193 4 14.993 4 10C4 7.87827 4.84285 5.84344 6.34315 4.34315C7.84344 2.84285 9.87827 2 12 2C14.1217 2 16.1566 2.84285 17.6569 4.34315C19.1571 5.84344 20 7.87827 20 10Z"
+                          stroke="#CFD3D4"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path
+                          d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z"
+                          stroke="#CFD3D4"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+
+                      <span className="font-16-regular">183, Bitarap Turkmenistan ave.</span>
+                    </div>
+                  </div>
                 </div>
+                <ContactForm />
               </div>
             </div>
           </Container>
         </section>
       </main>
-      <footer></footer>
+
+      <footer className="py-[64px]">
+        <Container>
+          <div className="flex justify-between items-center">
+            <div className="">
+              <img src="/congress_logo.svg" alt="logo" />
+            </div>
+
+            <span className="font-18-regular text-onAnySurfaceVariant">
+              2024 © Turkmen Congress. All rights reserved
+            </span>
+          </div>
+        </Container>
+      </footer>
     </>
   );
 }

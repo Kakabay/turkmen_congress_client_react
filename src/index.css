@@ -145,10 +145,35 @@
     @apply text-onAnySurfaceVariant text-[16px] leading-[24px] font-futura font-[400] text-center;
   }
 
+  .font-16-medium {
+    @apply text-onAnySurface text-[16px] leading-[24px] font-futura font-[450];
+  }
+
   .font-14-regular {
     @apply text-onAnySurface -tracking-[-1%] text-[14px] leading-[20px] font-futura font-[400];
   }
   .font-14-medium {
     @apply text-onAnySurfaceVariant -tracking-[-1%] text-[14px] leading-[20px] font-futura font-[450];
   }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    @apply bg-transparent text-onAnySurface;
+  }
+}
+
+.loader {
+  border: 2px solid #fff; /* Light grey */
+  border-top: 2px solid #213a73; /* Blue */
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 0.8s ease-in-out infinite;
 }
