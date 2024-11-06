@@ -3,7 +3,6 @@ import { FormControl, FormField, FormItem, FormLabel, FormMessage } from '../ui/
 import { Input } from '../ui/input';
 import { Textarea } from '../ui/textarea';
 import { cn } from '@/lib/utils';
-import { useMediaQuery } from 'usehooks-ts';
 import clsx from 'clsx';
 
 type Props = {
@@ -29,8 +28,6 @@ const CustomField = ({
   className,
   disabled,
 }: Props) => {
-  const desktop = useMediaQuery('(min-width: 1280px)');
-
   return (
     <FormField
       control={control}

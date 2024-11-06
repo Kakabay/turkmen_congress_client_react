@@ -1,6 +1,5 @@
 import { sectionsTranslations } from '@/lib/constants';
 import { useZusLang } from '@/zustand/use-zus-lang';
-import React from 'react';
 import Container from '../global/Container';
 
 const AboutSection = () => {
@@ -18,12 +17,12 @@ const AboutSection = () => {
           <div className="flex md:flex-row md:gap-8 flex-col gap-4">
             {activeLang.value === 'ru'
               ? sectionsTranslations.ru.about.texts.map((item) => (
-                  <p className="md:font-18-regular font-14-regular text-onAnySurfaceVariant">
+                  <p className="md:font-18-regular font-14-regular !text-onAnySurfaceVariant">
                     {item}
                   </p>
                 ))
               : sectionsTranslations.en.about.texts.map((item) => (
-                  <p className="md:font-18-regular font-14-regular text-onAnySurfaceVariant">
+                  <p className="md:font-18-regular font-14-regular !text-onAnySurfaceVariant">
                     {item}
                   </p>
                 ))}

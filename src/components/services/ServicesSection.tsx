@@ -1,26 +1,7 @@
-import React from 'react';
 import Container from '../global/Container';
 import ServiceCard from '../global/ServiceCard';
 import { useZusLang } from '@/zustand/use-zus-lang';
 import { sectionsTranslations } from '@/lib/constants';
-
-const services = [
-  {
-    img: '/service1.png',
-    title: 'Event organisation',
-    text: 'Mass events, international conferences, congresses and forums across the country and abroad.',
-  },
-  {
-    img: '/service2.png',
-    title: 'Hybrid events',
-    text: 'Hybrid conferences, teleconferences, teleconferences, business breakfasts, banquets, competitions and other online events.',
-  },
-  {
-    img: '/service3.png',
-    title: 'Events for business',
-    text: 'Business meetings, corporate trainings and professional congresses to enhance brand reputation.',
-  },
-];
 
 const ServicesSection = () => {
   const activeLang = useZusLang().activeLang;

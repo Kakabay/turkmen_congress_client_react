@@ -4,8 +4,8 @@ import LanguageDropdown from './LanguageDropdown';
 import { useEffect, useId, useState } from 'react';
 import { cn } from '@/lib/utils';
 import { AnimatePresence } from 'framer-motion';
-import Burger from '../ui/burger';
 import { useZusLang } from '@/zustand/use-zus-lang';
+import Burger from './Burger';
 
 const Header = () => {
   const [scrollY, setScrollY] = useState(false);

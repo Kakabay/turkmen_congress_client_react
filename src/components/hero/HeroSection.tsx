@@ -26,7 +26,7 @@ const HeroSection = () => {
                   : sectionsTranslations.en.hero.moto}
               </span>
             </div>
-            <div className="flex flex-col items-center justify-center gap-1">
+            <a href="#events" className="flex flex-col items-center justify-center gap-1">
               <svg
                 width="24"
                 height="24"
@@ -45,7 +45,7 @@ const HeroSection = () => {
                   ? sectionsTranslations.ru.hero.btn
                   : sectionsTranslations.en.hero.btn}
               </span>
-            </div>
+            </a>
           </div>
         </Container>
       </section>

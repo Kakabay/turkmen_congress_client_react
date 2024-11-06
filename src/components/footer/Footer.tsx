@@ -1,4 +1,3 @@
-import React from 'react';
 import Container from '../global/Container';
 import { useZusLang } from '@/zustand/use-zus-lang';
 import { sectionsTranslations } from '@/lib/constants';
