@@ -18,10 +18,6 @@ const languages = [
     value: 'en',
     view: 'English',
   },
-  {
-    value: 'tm',
-    view: 'Türkmen',
-  },
 ];
 
 const LanguageDropdown = () => {
@@ -34,7 +30,7 @@ const LanguageDropdown = () => {
           <span className="font-14-regular text-inherit">{activeLang.view}</span>{' '}
           <ChevronDown className="text-inherit" />
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="bg-surfaceContainerLow border border-surfaceContainerLowOutline p-0 rounded-sm">
+        <DropdownMenuContent className="bg-surfaceContainerLow ml-4 border border-surfaceContainerLowOutline p-0 rounded-sm">
           {languages
             .filter((item) => item.value !== activeLang.value)
             .map((item, i) => (

@@ -4,6 +4,7 @@ import { Input } from '../ui/input';
 import { Textarea } from '../ui/textarea';
 import { cn } from '@/lib/utils';
 import { useMediaQuery } from 'usehooks-ts';
+import clsx from 'clsx';
 
 type Props = {
   control: any;
@@ -36,7 +37,7 @@ const CustomField = ({
       name={name}
       render={({ field }) => (
         <FormItem className={cn(className, 'flex flex-col w-full relative ga-2')}>
-          <FormLabel className="font-16-medium ">{label}</FormLabel>
+          <FormLabel className="font-16-medium text-left">{label}</FormLabel>
           <FormControl>
             {!area ? (
               <Input
@@ -44,23 +45,25 @@ const CustomField = ({
                 placeholder={placeholder}
                 {...field}
                 disabled={disabled}
-                className={cn(
-                  {
-                    'border-error': error?.message,
-                  },
-                  'bg-transparent border-b border-outline outline-none p-0 pb-2 font-14-regular selection:bg-transparent text-onAnySurface placeholder:font-14-regular placeholder:text-onAnySurfaceVariant focus:border-outline2 focus:bg-transparent transition-all duration-300 ease-in-out',
-                )}
+                className={clsx({
+                  'bg-transparent border-b outline-none p-0 pb-2 font-14-regular selection:bg-transparent text-onAnySurface placeholder:font-14-regular placeholder:text-onAnySurfaceVariant border-outline focus:border-outline2 focus:bg-transparent transition-all duration-300 ease-in-out':
+                    true,
+                  '!border-error': error?.message,
+                })}
               />
             ) : (
               <Textarea
                 rows={1}
                 placeholder={placeholder}
                 {...field}
-                className={cn(
+                className={clsx(
+                  'bg-transparent border-b outline-none p-0 pb-2 font-14-regular selection:bg-transparent text-onAnySurface placeholder:font-14-regular placeholder:text-onAnySurfaceVariant  focus:bg-transparent transition-all duration-300 ease-in-out',
                   {
-                    'border-b border-error': error?.message,
+                    '!border-error focus:border-error': error?.message,
                   },
-                  'bg-transparent  border-b border-outline outline-none p-0 pb-2 font-14-regular text-onAnySurface placeholder:font-14-regular placeholder:text-onAnySurfaceVariant focus:border-outline2 transition-all duration-300 ease-in-out',
+                  {
+                    'border-outline focus:border-outline2': !error?.message,
+                  },
                 )}
               />
             )}

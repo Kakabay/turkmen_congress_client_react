@@ -111,7 +111,7 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border scroll-smooth;
   }
   body {
     @apply bg-background text-onAnySurfaceVariant font-futura font-normal;
@@ -122,19 +122,19 @@
   }
 
   .font-80-medium {
-    @apply text-onAnySurface -tracking-[-2%] text-[80px] leading-[100%] font-ztNeue font-[400] text-center;
+    @apply text-onAnySurface -tracking-[-2%] text-[36px] sm:text-[80px] leading-[115%] sm:leading-[100%] font-ztNeue font-semibold sm:font-normal  text-center;
   }
 
   .font-64-regular {
-    @apply text-gold -tracking-[-2%] text-[64px] leading-[100%] font-ztNeue font-[600];
+    @apply text-gold -tracking-[-2%] text-[36px] sm:text-[64px] leading-[115%] sm:leading-[100%] font-ztNeue font-medium md:font-semibold;
   }
 
   .font-36-medium {
-    @apply text-onAnySurface -tracking-[-2%] text-[36px] leading-[100%] font-ztNeue font-[500];
+    @apply text-onAnySurface -tracking-[-2%] text-[24px] sm:text-[36px] leading-[100%] font-ztNeue font-[500];
   }
 
   .font-20-medium {
-    @apply text-onAnySurfaceVariant text-[20px] leading-[28px] font-futura font-[5450];
+    @apply text-onAnySurfaceVariant text-[16px] sm:text-[20px] leading-[28px] font-futura font-[500];
   }
 
   .font-18-regular {
@@ -152,8 +152,13 @@
   .font-14-regular {
     @apply text-onAnySurface -tracking-[-1%] text-[14px] leading-[20px] font-futura font-[400];
   }
+
   .font-14-medium {
     @apply text-onAnySurfaceVariant -tracking-[-1%] text-[14px] leading-[20px] font-futura font-[450];
+  }
+
+  .burger-item {
+    @apply rounded-[2px] bg-gold h-0.5 w-full;
   }
 
   input:-webkit-autofill,
@@ -167,6 +172,9 @@
   select:-webkit-autofill:focus {
     @apply bg-transparent text-onAnySurface;
   }
+}
+
+@layer utilities {
 }
 
 .loader {
