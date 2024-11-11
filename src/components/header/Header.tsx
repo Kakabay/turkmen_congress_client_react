@@ -33,7 +33,7 @@ const Header = () => {
 
       <header
         className={cn(
-          'fixed w-full hidden sm:block z-10 top-0 left-0 right-0 transition-all duration-300 ',
+          'fixed w-full hidden sm:block z-10 top-0 left-0 right-0 transition-all duration-200 ease-in-out',
           {
             'bg-transparent text-onAnySurface': !scrollY,
             'bg-backgroundInverse  text-onAnySurfaceInverse': scrollY,
@@ -42,13 +42,13 @@ const Header = () => {
         <Container>
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center gap-8">
-              <div className="">
+              <a href="#home" className="">
                 {scrollY ? (
                   <img src="/logo-inverse.svg" alt="logo" />
                 ) : (
                   <img src="/congress_logo.svg" alt="logo" />
                 )}
-              </div>
+              </a>
               <LanguageDropdown />
             </div>
             <nav className="flex items-center gap-6">
@@ -57,7 +57,7 @@ const Header = () => {
                     <a
                       key={useId()}
                       href={item.link}
-                      className=" font-[450] -tracking-[2%] text-[14px] inline-block py-3 hover:text-onAnySurfaceVariant transition-all duration-300 ease-in-out cursor-pointer">
+                      className="font-[450] -tracking-[2%] text-[14px] inline-block py-3 hover:text-onAnySurfaceVariant transition-all duration-200 ease-in-out cursor-pointer">
                       {item.name}
                     </a>
                   ))
@@ -65,7 +65,7 @@ const Header = () => {
                     <a
                       key={useId()}
                       href={item.link}
-                      className=" font-[450] -tracking-[2%] text-[14px] inline-block py-3 hover:text-onAnySurfaceVariant transition-all duration-300 ease-in-out cursor-pointer">
+                      className=" font-[450] -tracking-[2%] text-[14px] inline-block py-3 hover:text-onAnySurfaceVariant transition-all duration-200 ease-in-out cursor-pointer">
                       {item.name}
                     </a>
                   ))}

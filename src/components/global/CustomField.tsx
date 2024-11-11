@@ -42,24 +42,22 @@ const CustomField = ({
                 placeholder={placeholder}
                 {...field}
                 disabled={disabled}
-                className={clsx({
-                  'bg-transparent border-b outline-none p-0 pb-2 font-14-regular selection:bg-transparent text-onAnySurface placeholder:font-14-regular placeholder:text-onAnySurfaceVariant border-outline focus:border-outline2 focus:bg-transparent transition-all duration-300 ease-in-out':
-                    true,
-                  '!border-error': error?.message,
-                })}
+                className={cn(
+                  'bg-transparent border-b outline-none p-0 pb-2 font-14-regular selection:bg-transparent text-onAnySurface placeholder:font-14-regular placeholder:text-onAnySurfaceVariant border-outline focus:border-outline2 focus:bg-transparent transition-all duration-300 ease-in-out',
+                  {
+                    '!border-b !border-error !focus:border-error !outline-error': error?.message,
+                  },
+                )}
               />
             ) : (
               <Textarea
                 rows={1}
                 placeholder={placeholder}
                 {...field}
-                className={clsx(
-                  'bg-transparent border-b outline-none p-0 pb-2 font-14-regular selection:bg-transparent text-onAnySurface placeholder:font-14-regular placeholder:text-onAnySurfaceVariant  focus:bg-transparent transition-all duration-300 ease-in-out',
+                className={cn(
+                  'bg-transparent border-b outline-none p-0 pb-2 font-14-regular selection:bg-transparent text-onAnySurface placeholder:font-14-regular placeholder:text-onAnySurfaceVariant border-outline focus:border-outline2 focus:bg-transparent transition-all duration-300 ease-in-out',
                   {
-                    '!border-error focus:border-error': error?.message,
-                  },
-                  {
-                    'border-outline focus:border-outline2': !error?.message,
+                    '!border-error': error?.message,
                   },
                 )}
               />

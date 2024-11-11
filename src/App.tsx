@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <Header />
-      <main className="flex flex-col sm:gap-[200px] gap-20 w-full">
+      <main className="flex flex-col sm:gap-[200px] gap-20 w-full" id="home">
         <HeroSection />
 
         <div id="events" className="-mb-[200px] pt-[100px]"></div>
