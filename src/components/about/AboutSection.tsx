@@ -16,13 +16,17 @@ const AboutSection = () => {
           </h2>
           <div className="flex md:flex-row md:gap-8 flex-col gap-4">
             {activeLang.value === 'ru'
-              ? sectionsTranslations.ru.about.texts.map((item) => (
-                  <p className="md:font-18-regular font-14-regular !text-onAnySurfaceVariant">
+              ? sectionsTranslations.ru.about.texts.map((item, i) => (
+                  <p
+                    key={i}
+                    className="md:font-18-regular font-14-regular !text-onAnySurfaceVariant">
                     {item}
                   </p>
                 ))
-              : sectionsTranslations.en.about.texts.map((item) => (
-                  <p className="md:font-18-regular font-14-regular !text-onAnySurfaceVariant">
+              : sectionsTranslations.en.about.texts.map((item, i) => (
+                  <p
+                    key={i}
+                    className="md:font-18-regular font-14-regular !text-onAnySurfaceVariant">
                     {item}
                   </p>
                 ))}

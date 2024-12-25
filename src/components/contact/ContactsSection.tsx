@@ -90,10 +90,10 @@ const ContactsSection = () => {
                     />
                   </svg>
 
-                  <span className="sm:font-16-regular font-12-regular">
+                  <span className="sm:font-16-regular font-12-regular md:!text-left sm:w-[300px] w-[220px]">
                     {activeLang.value === 'ru'
-                      ? 'проспект Битарап Туркменистан 183'
-                      : '183, Bitarap Turkmenistan ave.'}
+                      ? 'г. Ашхабад, Копетдагский этрап, улица 1946 (Анкара), дом 23'
+                      : 'Ashgabat cıty, Kopetdag dıstrıct, 1946 (Ankara) street, building 23'}
                   </span>
                 </div>
               </div>
