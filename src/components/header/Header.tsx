@@ -1,11 +1,11 @@
-import Container from '../global/Container';
-import { languages } from '@/lib/constants';
-import LanguageDropdown from './LanguageDropdown';
-import { useEffect, useId, useState } from 'react';
-import { cn } from '@/lib/utils';
-import { AnimatePresence } from 'framer-motion';
-import { useZusLang } from '@/zustand/use-zus-lang';
-import Burger from './Burger';
+import Container from "../global/Container";
+import { languages } from "@/lib/constants";
+import LanguageDropdown from "./LanguageDropdown";
+import { useEffect, useId, useState } from "react";
+import { cn } from "@/lib/utils";
+import { AnimatePresence } from "framer-motion";
+import { useZusLang } from "@/zustand/use-zus-lang";
+import Burger from "./Burger";
 
 const Header = () => {
   const [scrollY, setScrollY] = useState(false);
@@ -18,10 +18,10 @@ const Header = () => {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -33,12 +33,13 @@ const Header = () => {
 
       <header
         className={cn(
-          'fixed w-full hidden sm:block z-10 top-0 left-0 right-0 transition-all duration-200 ease-in-out',
+          "fixed w-full hidden sm:block z-10 top-0 left-0 right-0 transition-all duration-200 ease-in-out",
           {
-            'bg-transparent text-onAnySurface': !scrollY,
-            'bg-backgroundInverse  text-onAnySurfaceInverse': scrollY,
-          },
-        )}>
+            "bg-transparent text-onAnySurface": !scrollY,
+            "bg-backgroundInverse  text-onAnySurfaceInverse": scrollY,
+          }
+        )}
+      >
         <Container>
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center gap-8">
@@ -52,12 +53,13 @@ const Header = () => {
               <LanguageDropdown />
             </div>
             <nav className="flex items-center gap-6">
-              {activeLang.value === 'ru'
+              {activeLang.value === "ru"
                 ? languages.russian.items.map((item) => (
                     <a
                       key={useId()}
                       href={item.link}
-                      className="font-[450] -tracking-[2%] text-[14px] inline-block py-3 hover:text-onAnySurfaceVariant transition-all duration-200 ease-in-out cursor-pointer">
+                      className="font-[450] -tracking-[2%] text-[14px] inline-block py-3 hover:text-onAnySurfaceVariant transition-all duration-200 ease-in-out cursor-pointer"
+                    >
                       {item.name}
                     </a>
                   ))
@@ -65,7 +67,8 @@ const Header = () => {
                     <a
                       key={useId()}
                       href={item.link}
-                      className=" font-[450] -tracking-[2%] text-[14px] inline-block py-3 hover:text-onAnySurfaceVariant transition-all duration-200 ease-in-out cursor-pointer">
+                      className=" font-[450] -tracking-[2%] text-[14px] inline-block py-3 hover:text-onAnySurfaceVariant transition-all duration-200 ease-in-out cursor-pointer"
+                    >
                       {item.name}
                     </a>
                   ))}
@@ -76,7 +79,11 @@ const Header = () => {
 
       <header className="py-3 container sm:hidden bg-white flex items-center justify-between">
         <div className="w-[108px] h-6">
-          <img src="/logo-inverse.svg" alt="logo" className="size-full object-contain" />
+          <img
+            src="/logo-inverse.svg"
+            alt="logo"
+            className="size-full object-contain"
+          />
         </div>
 
         <img src="/burger.svg" alt="" onClick={() => setBurger(true)} />
