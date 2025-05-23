@@ -1,7 +1,7 @@
 import Container from "../global/Container";
 import { languages } from "@/lib/constants";
 import LanguageDropdown from "./LanguageDropdown";
-import { useEffect, useId, useState } from "react";
+import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { AnimatePresence } from "framer-motion";
 import { useZusLang } from "@/zustand/use-zus-lang";
@@ -54,18 +54,18 @@ const Header = () => {
             </div>
             <nav className="flex items-center gap-6">
               {activeLang.value === "ru"
-                ? languages.russian.items.map((item) => (
+                ? languages.russian.items.map((item, i) => (
                     <a
-                      key={useId()}
+                      key={i}
                       href={item.link}
                       className="font-[450] -tracking-[2%] text-[14px] inline-block py-3 hover:text-onAnySurfaceVariant transition-all duration-200 ease-in-out cursor-pointer"
                     >
                       {item.name}
                     </a>
                   ))
-                : languages.english.items.map((item) => (
+                : languages.english.items.map((item, i) => (
                     <a
-                      key={useId()}
+                      key={i}
                       href={item.link}
                       className=" font-[450] -tracking-[2%] text-[14px] inline-block py-3 hover:text-onAnySurfaceVariant transition-all duration-200 ease-in-out cursor-pointer"
                     >
