@@ -1,0 +1,76 @@
+{
+  "events": {
+    "title": "Upcoming event",
+    "organizersTitle": "Organizers:",
+    "coOrganizersTitle": "Co-organizer:",
+
+    "items": [
+      {
+        "cat": "Global forum",
+        "title": "Commercial, Investment and Business opportunities in Turkmenistan 2024",
+        "date": "7-8 November 2024 - Abu Dhabi, UAE"
+      },
+      {
+        "cat": "International Conference",
+        "title": "Quality assurance in compliance with international standards in Turkmenistan",
+        "date": "April 29-30, 2025 - Ashgabat, Turkmenistan"
+      }
+    ]
+  },
+
+  "about": {
+    "title": "",
+    "texts": ["", ""],
+
+    "team": {
+      "title": "Our team",
+      "button": "Biography",
+
+      "items": [
+        {
+          "name": "Vepa Malikgulyyev",
+          "speciality": "Project Director ",
+
+          "bio": ["In development"]
+        },
+        {
+          "name": "Batyr Durdyyev",
+          "speciality": "Business Consultant",
+
+          "bio": [
+            "Batyr Durdyyev has a Bachelor’s degree in Foreign Languages from Turkmen State University and a Postgraduate degree in Business and Management in Emerging Markets from the University of Reading, UK.",
+            "Since 2005, he has served as Founder and CEO of TPS Advertising Agency, overseeing ventures including Tehnika Dunyasi (trading), Turkmen Forum (conferences), and Turkmen Expo (exhibitions), all of which have become key players in their sectors in Turkmenistan",
+            "He is also active in social and professional circles, including the Chess Federation board, alumni networks, and business associations. He speaks Turkmen, Russian, English, and Turkish."
+          ]
+        },
+        {
+          "name": "Magtymguly Hojamyradov",
+          "speciality": "Government Relations Specialist",
+          "bio": [
+            "Magtymguly Hojamyradov – specialist in international business, economics, and business event management.",
+            "Holds a Master’s degree in Law from the National Law Academy of Ukraine named after Yaroslav the Wise. Additionally, he has completed professional development training at the Academy of Civil Service under the President of Turkmenistan.",
+            "Before joining TurkmenCongress, he held several significant positions in governmental and international organizations. He worked as an Adviser to the Ombudsman of Turkmenistan, a UNDP consultant on institutional development, and served as Deputy Head of the Department for Political Risk Analysis at the Agency for the Protection of the Economy from Risks under the Ministry of Finance and Economy of Turkmenistan.",
+            "Throughout his professional career, he has been actively involved in fostering international cooperation, attracting foreign investors, and improving the business environment in the region."
+          ]
+        },
+        {
+          "name": "Oksana Kulagina",
+          "speciality": "Manager",
+          "bio": ["In development"]
+        }
+      ]
+    }
+  },
+
+  "partners": {
+    "title": "General partner—",
+    "items": [
+      {
+        "text": "Nielsonsmith is a highly specialized trade compliance focused international organization, working closely with the compliance community to create specialist events that are produced through cooperation with senior executives and leading analysts, to provide real insight from a single point for the industry to move, share ideas and experiences on a neutral platform. We are the compliance conference company."
+      },
+      {
+        "text": "TurkmenExpo is the leading organizer of exhibitions and business events in Turkmenistan. The company creates platforms for cooperation between businesses, government entities, and consumers. It organizes industry-specific exhibitions, and seminars in sectors such as energy, agriculture, construction, and technology, with a strong focus on international collaboration and investment. TurkmenExpo provides a full range of services, including marketing, logistics, booth design, and event setup, helping clients expand their market presence and access global opportunities."
+      }
+    ]
+  }
+}

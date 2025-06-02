@@ -1,18 +1,20 @@
-import Header from './components/header/Header';
-import ServicesSection from './components/services/ServicesSection';
-import HeroSection from './components/hero/HeroSection';
-import EventsSection from './components/events/EventsSection';
-import PartnersSection from './components/partners/PartnersSection';
+import Header from "./components/header/Header";
+import ServicesSection from "./components/services/ServicesSection";
+import HeroSection from "./components/hero/HeroSection";
+import EventsSection from "./components/events/EventsSection";
+import PartnersSection from "./components/partners/PartnersSection";
 
-import AboutSection from './components/about/AboutSection';
-import ContactsSection from './components/contact/ContactsSection';
-import Footer from './components/footer/Footer';
+import AboutSection from "./components/about/AboutSection";
+import ContactsSection from "./components/contact/ContactsSection";
+import Footer from "./components/footer/Footer";
+import LanguageSync from "./lang-sync";
 
 function App() {
   return (
     <>
+      <LanguageSync />
       <Header />
-      <main className="flex flex-col sm:gap-[200px] gap-20 w-full" id="home">
+      <main className="flex flex-col sm:gap-40 gap-20 w-full" id="home">
         <HeroSection />
 
         <div id="events" className="-mb-[200px] pt-[100px]"></div>

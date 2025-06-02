@@ -5,37 +5,40 @@
 /* src/globals.css */
 
 @font-face {
-  font-family: 'FuturaPT';
-  src: url('/src/assets/fonts/FuturaPT/FuturaPT-Book.woff2') format('woff2'),
-    url('/src/assets/fonts/FuturaPT/FuturaPT-Book.woff') format('woff');
+  font-family: "FuturaPT";
+  src: url("/src/assets/fonts/FuturaPT/FuturaPT-Book.woff2") format("woff2"),
+    url("/src/assets/fonts/FuturaPT/FuturaPT-Book.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'FuturaPT';
-  src: url('/src/assets/fonts/FuturaPT/FuturaPT-Medium.woff2') format('woff2'),
-    url('/src/assets/fonts/FuturaPT/FuturaPT-Medium.woff') format('woff');
+  font-family: "FuturaPT";
+  src: url("/src/assets/fonts/FuturaPT/FuturaPT-Medium.woff2") format("woff2"),
+    url("/src/assets/fonts/FuturaPT/FuturaPT-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'ZTNeueRalewe';
-  src: url('/src/assets/fonts/ZTNeueRalewe/ZTNeueRalewe-Regular.otf') format('opentype');
+  font-family: "ZTNeueRalewe";
+  src: url("/src/assets/fonts/ZTNeueRalewe/ZTNeueRalewe-Regular.otf")
+    format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: 'ZTNeueRalewe';
-  src: url('/src/assets/fonts/ZTNeueRalewe/ZTNeueRalewe-Medium.otf') format('opentype');
+  font-family: "ZTNeueRalewe";
+  src: url("/src/assets/fonts/ZTNeueRalewe/ZTNeueRalewe-Medium.otf")
+    format("opentype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'ZTNeueRalewe';
-  src: url('/src/assets/fonts/ZTNeueRalewe/ZTNeueRalewe-SemiBold.otf') format('opentype');
+  font-family: "ZTNeueRalewe";
+  src: url("/src/assets/fonts/ZTNeueRalewe/ZTNeueRalewe-SemiBold.otf")
+    format("opentype");
   font-weight: 600;
   font-style: normal;
 }
@@ -112,6 +115,10 @@
   }
   body {
     @apply bg-background text-onAnySurfaceVariant font-futura font-normal;
+  }
+
+  :disabled {
+    @apply opacity-50;
   }
 
   .container {
