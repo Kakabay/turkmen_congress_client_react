@@ -1,13 +1,10 @@
-import { useZusLang } from "@/zustand/use-zus-lang";
 import Container from "../global/Container";
-import { sectionsTranslations } from "@/lib/constants";
 import { useTranslation } from "react-i18next";
 import { PartnerCard } from "./PartnerCard";
 import { cn } from "@/lib/utils";
 
 const PartnersSection = () => {
   const { t } = useTranslation("home");
-  const value = useZusLang((state) => state.activeLang.value);
 
   const { title, items } = t("partners", { returnObjects: true }) as {
     title: string;

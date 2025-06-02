@@ -1,7 +1,7 @@
 import { sectionsTranslations } from "@/lib/constants";
 import { useZusLang } from "@/zustand/use-zus-lang";
 import Container from "../global/Container";
-import { Team } from "../team/team";
+import { Team } from "../team/Team";
 
 const AboutSection = () => {
   const activeLang = useZusLang().activeLang;
