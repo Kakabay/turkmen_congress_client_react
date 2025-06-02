@@ -25,17 +25,36 @@ const EventsSection = () => {
 
           <div ref={emblaRef} className="embla">
             <div className="embla__container flex gap-8">
-              {items.map((item, i) => (
-                <div className="flex-[0_0_100%] embla__slide" key={i}>
-                  <EventCard
-                    i={i}
-                    className=""
-                    image={`/events/${i + 1}.png`}
-                    {...item}
+              {items.map((item, i) =>
+                i === 2 ? (
+                  <a
+                    href={"https://tkmchess.com.tm/news/60"}
+                    target="_blank"
+                    className="flex-[0_0_100%] embla__slide cursor-pointer"
                     key={i}
-                  />
-                </div>
-              ))}
+                  >
+                    <EventCard
+                      status="soon"
+                      i={i}
+                      className=""
+                      image={`/events/${i + 1}.png`}
+                      {...item}
+                      key={i}
+                    />
+                  </a>
+                ) : (
+                  <div key={i} className="flex-[0_0_100%] embla__slide">
+                    <EventCard
+                      status="completed"
+                      i={i}
+                      className=""
+                      image={`/events/${i + 1}.png`}
+                      {...item}
+                      key={i}
+                    />
+                  </div>
+                )
+              )}
             </div>
           </div>
         </div>
@@ -43,7 +62,13 @@ const EventsSection = () => {
         <div className="flex sm:hidden flex-col gap-4">
           <h2 className="font-64-regular">{title}</h2>
           {items.map((item, i) => (
-            <EventCard i={i} image={`/events/${i + 1}.png`} {...item} key={i} />
+            <EventCard
+              status="completed"
+              i={i}
+              image={`/events/${i + 1}.png`}
+              {...item}
+              key={i}
+            />
           ))}
         </div>
       </Container>

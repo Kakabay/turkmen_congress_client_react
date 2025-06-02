@@ -1,20 +1,24 @@
 {
   "events": {
     "title": "Предстоящее событие",
+    "organizersTitle": "Organizers:",
+    "coOrganizersTitle": "Co-organizer:",
+
     "items": [
       {
         "cat": "Global forum",
         "title": "Коммерческие, инвестиционные и бизнес возможности в Туркменистане",
-        "date": "7-8 Ноября, 2024 - Абу-Даби, ОАЭ",
-        "organizersTitle": "Organizers:",
-        "coOrganizersTitle": "Co-organizer:"
+        "date": "7-8 Ноября, 2024 - Абу-Даби, ОАЭ"
       },
       {
         "cat": "Международная конференция",
         "title": "Обеспечение качества в соответствии с международными стандартами в Туркменистане",
-        "date": "29-30 апреля, 2025, - Ашгабат, Туркменистан",
-        "organizersTitle": "Organizers:",
-        "coOrganizersTitle": "Co-organizer:"
+        "date": "29-30 апреля, 2025, - Ашгабат, Туркменистан"
+      },
+      {
+        "cat": "Global forum",
+        "title": "Международный турнир по шахматам среди мальчиков и девочек до 8, 10 и 12 лет",
+        "date": "15 — 19 июня 2025 Ашхабад, ТУРКМЕНИСТАН"
       }
     ]
   },

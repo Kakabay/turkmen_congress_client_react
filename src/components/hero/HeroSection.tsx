@@ -1,38 +1,45 @@
-import { useZusLang } from '@/zustand/use-zus-lang';
-import Container from '../global/Container';
-import { sectionsTranslations } from '@/lib/constants';
+import { useZusLang } from "@/zustand/use-zus-lang";
+import Container from "../global/Container";
+import { sectionsTranslations } from "@/lib/constants";
 
 const HeroSection = () => {
   const activeLang = useZusLang().activeLang;
   return (
     <>
-      <section className="hero sm:block hidden bg-hero-img w-full h-[996px]" id="hero">
+      <section
+        className="hero sm:block hidden bg-hero-img w-full h-[996px]"
+        id="hero"
+      >
         <Container>
           <div className="h-[996px] w-full relative flex flex-col justify-end pb-2 gap-2">
             <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[848px] w-full font-80-medium">
-              {activeLang.value === 'ru'
+              {activeLang.value === "ru"
                 ? sectionsTranslations.ru.hero.title
                 : sectionsTranslations.en.hero.title}
             </h1>
             <div className="flex w-full justify-between items-end">
               <span className="font-14-regular">
-                {activeLang.value === 'ru'
+                {activeLang.value === "ru"
                   ? sectionsTranslations.ru.hero.venue
                   : sectionsTranslations.en.hero.venue}
               </span>
               <span className="font-18-regular max-w-[518px] w-full">
-                {activeLang.value === 'ru'
+                {activeLang.value === "ru"
                   ? sectionsTranslations.ru.hero.moto
                   : sectionsTranslations.en.hero.moto}
               </span>
             </div>
-            <a href="#events" className="flex flex-col items-center justify-center gap-1">
+            <a
+              href="#events"
+              className="flex flex-col items-center justify-center gap-1"
+            >
               <svg
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
                 fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path
                   fillRule="evenodd"
                   clipRule="evenodd"
@@ -41,7 +48,7 @@ const HeroSection = () => {
                 />
               </svg>
               <span className="text-onAnySurfaceVariant text-[12px] font-medium">
-                {activeLang.value === 'ru'
+                {activeLang.value === "ru"
                   ? sectionsTranslations.ru.hero.btn
                   : sectionsTranslations.en.hero.btn}
               </span>
@@ -53,17 +60,17 @@ const HeroSection = () => {
       <section className=" flex flex-col gap-8 items-center sm:hidden pt-8">
         <div className="flex flex-col gap-4 text-center container">
           <h1 className="font-80-medium">
-            {activeLang.value === 'ru'
+            {activeLang.value === "ru"
               ? sectionsTranslations.ru.hero.title
               : sectionsTranslations.en.hero.title}
           </h1>
           <h4 className="text-[14px]">
-            {activeLang.value === 'ru'
+            {activeLang.value === "ru"
               ? sectionsTranslations.ru.hero.moto
               : sectionsTranslations.en.hero.moto}
           </h4>
           <h5 className="text-[12px] font-medium">
-            {activeLang.value === 'ru'
+            {activeLang.value === "ru"
               ? sectionsTranslations.ru.hero.venue
               : sectionsTranslations.en.hero.venue}
           </h5>

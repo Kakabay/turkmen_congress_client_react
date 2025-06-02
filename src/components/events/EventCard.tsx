@@ -10,6 +10,7 @@ interface Props {
   date: string;
   image: string;
   i: number;
+  status: string;
 }
 
 export const EventCard: FC<Props> = ({
@@ -19,6 +20,7 @@ export const EventCard: FC<Props> = ({
   date,
   image,
   i,
+  status,
 }) => {
   const { t } = useTranslation("home");
   const value = useZusLang((state) => state.activeLang.value);
@@ -26,6 +28,8 @@ export const EventCard: FC<Props> = ({
   const { organizersTitle, coOrganizersTitle } = t("events", {
     returnObjects: true,
   }) as { organizersTitle: string; coOrganizersTitle: string };
+
+  const getStatustitle = () => (value === "ru" ? "Статус:" : "Status:");
 
   return (
     <>
@@ -54,10 +58,18 @@ export const EventCard: FC<Props> = ({
                     className="w-full h-full object-contain"
                   />
                 </div>
-              ) : (
+              ) : i === 1 ? (
                 <div className="h-[64px] w-[221px]">
                   <img
                     src="/organizers.png"
+                    alt=""
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+              ) : (
+                <div className="size-[64px]">
+                  <img
+                    src="/events/organizer-2.png"
                     alt=""
                     className="w-full h-full object-contain"
                   />
@@ -84,8 +96,22 @@ export const EventCard: FC<Props> = ({
             alt=""
             className="rounded-[2px] size-full object-contain"
           />
-          <div className="absolute top-2.5 right-2 rounded-full bg-surfaceContainerLow text-sm px-2 py-0.5 text-onAnySurfaceVariant font-medium">
-            {value === "ru" ? "Статус: Завершено" : "Status: Completed"}
+          <div
+            className={cn(
+              "absolute top-2.5 right-2 rounded-full  text-sm px-2 py-0.5  font-medium",
+              status === "soon"
+                ? "bg-gold text-white"
+                : "bg-surfaceContainerLow text-onAnySurfaceVariant"
+            )}
+          >
+            <>{getStatustitle()}</>
+            {status === "completed"
+              ? value === "ru"
+                ? "Завершен"
+                : "Completed"
+              : value === "ru"
+              ? "Скоро"
+              : "Soon"}
           </div>
         </div>
       </article>
