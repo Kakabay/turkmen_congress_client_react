@@ -10,7 +10,7 @@ const EventsSection = () => {
 
   const { t } = useTranslation("home");
 
-  const { title, items } = t("events", { returnObjects: true }) as {
+  const { title } = t("events", { returnObjects: true }) as {
     title: string;
     items: {
       cat: string;
