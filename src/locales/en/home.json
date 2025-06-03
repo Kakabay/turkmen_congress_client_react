@@ -1,8 +1,8 @@
 {
   "events": {
     "title": "Upcoming event",
-    "organizersTitle": "Organizers:",
-    "coOrganizersTitle": "Co-organizer:",
+    "organizersTitle": "Organisers:",
+    "coOrganizersTitle": "Co-organisers:",
 
     "items": [
       {
@@ -16,7 +16,7 @@
         "date": "April 29-30, 2025 - Ashgabat, Turkmenistan"
       },
       {
-        "cat": "Global forum",
+        "cat": "International Tournament",
         "title": "International Chess Tournament for Boys and Girls (Under 8, 10, 12)",
         "date": "15-19 June, 2025, in Ashgabat, Turkmenistan"
       }
@@ -36,7 +36,9 @@
           "name": "Vepa Malikgulyyev",
           "speciality": "Project Director ",
 
-          "bio": ["In development"]
+          "bio": [
+            "An expert in economic policy, private sector development, value chains, and eCommerce, with over 20 years of experience across international organizations, the public sector, and entrepreneurship. He has led projects for the World Bank, USAID, and the European Union, with a strong focus on export promotion, ESG standards implementation, and the development of digital ecosystems. Currently, he serves as Deputy CEO of the consulting firm Standart Hyzmat and previously led USAID’s Future Growth Initiative in Turkmenistan. Under his leadership, multi-million-dollar investments were mobilized in the private sector, and support was provided to over 80 companies. Vepa is a Chevening Scholar and a graduate of the University of Cambridge, actively advocating for sustainable and inclusive economic growth in Central Asia."
+          ]
         },
         {
           "name": "Magtymguly Hojamyradov",
@@ -76,6 +78,13 @@
           "speciality": "Consultant",
           "bio": [
             "A highly accomplished professional in external relations and international marketing, Shemshat Muhammetkulieva currently leads international outreach and partnership efforts at TurkmenExpo—the leading private-sector organizer of international exhibitions and business forums in Turkmenistan. With over 27 years of experience, she has collaborated with global institutions including USAID, UNICEF, the EU, and the German Government. Her prior roles include Country Coordinator for the USAID-funded Safe Migration in Central Asia Program, where she worked closely with national stakeholders on legislative reform and capacity-building for law enforcement. She has led over 300 development initiatives, contributed to key legal reforms, and received specialized training from institutions in the UK, Germany, and the US."
+          ]
+        },
+        {
+          "name": "Oraz Odeev",
+          "speciality": "Travel Manager",
+          "bio": [
+            "An engineer with a higher military education and expertise in public service and sports administration. He graduated from the Military Institute of the Ministry of Defense of Turkmenistan in 2004. He has worked in the State Migration Service, the State Service for Combating Drugs, the Executive Committee for the V Asian Games, and the management structure of the Ashgabat Olympic Complex. From 2019 to 2024, he served as Director of the Ashgabat Multipurpose Stadium. Fluent in Russian and English, he also has international experience."
           ]
         }
       ]

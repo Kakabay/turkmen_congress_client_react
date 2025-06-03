@@ -9,8 +9,8 @@ interface Props {
   title: string;
   date: string;
   image: string;
-  i: number;
   status: string;
+  organizer: string;
 }
 
 export const EventCard: FC<Props> = ({
@@ -19,8 +19,8 @@ export const EventCard: FC<Props> = ({
   title,
   date,
   image,
-  i,
   status,
+  organizer,
 }) => {
   const { t } = useTranslation("home");
   const value = useZusLang((state) => state.activeLang.value);
@@ -50,31 +50,13 @@ export const EventCard: FC<Props> = ({
               <span className="font-14-regular text-onAnySurfaceVariant">
                 {organizersTitle}
               </span>
-              {i === 0 ? (
-                <div className="size-[64px]">
-                  <img
-                    src="/events/organizer-1.png"
-                    alt=""
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-              ) : i === 1 ? (
-                <div className="h-[64px] w-[221px]">
-                  <img
-                    src="/organizers.png"
-                    alt=""
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-              ) : (
-                <div className="size-[64px]">
-                  <img
-                    src="/events/organizer-2.png"
-                    alt=""
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-              )}
+              <div className="h-[64px]">
+                <img
+                  src={organizer}
+                  alt=""
+                  className="w-full h-full object-contain"
+                />
+              </div>
             </div>
             <div className="flex flex-col gap-1 w-[203px]">
               <span className="font-14-regular text-onAnySurfaceVariant">
@@ -107,11 +89,11 @@ export const EventCard: FC<Props> = ({
             <>{getStatustitle()}</>
             {status === "completed"
               ? value === "ru"
-                ? "Завершен"
-                : "Completed"
+                ? " Завершен"
+                : " Completed"
               : value === "ru"
-              ? "Скоро"
-              : "Soon"}
+              ? " Скоро"
+              : " Soon"}
           </div>
         </div>
       </article>
@@ -129,7 +111,7 @@ export const EventCard: FC<Props> = ({
             </span>
             <div className="h-[64px] w-[221px]">
               <img
-                src="/organizers.png"
+                src={organizer}
                 alt=""
                 className="w-full h-full object-contain"
               />

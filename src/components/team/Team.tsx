@@ -7,7 +7,10 @@ import { useTranslation } from "react-i18next";
 
 export const Team = () => {
   const { t } = useTranslation("home");
-  const [emblaRef, emblaApi] = useEmblaCarousel({});
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    dragFree: true,
+    slidesToScroll: 3,
+  });
 
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(true);
@@ -77,7 +80,7 @@ export const Team = () => {
         </button>
       </div>
 
-      <div ref={emblaRef} className="embla overflow-hidden">
+      <div ref={emblaRef} id="team" className="embla overflow-hidden">
         <div className="embla__container flex gap-4">
           {data.items.map((item, i) => (
             <TeamCard
@@ -91,7 +94,7 @@ export const Team = () => {
       </div>
 
       <div className="flex items-center justify-center gap-2 mt-4">
-        {[...Array(2)].map((_, i) => (
+        {[...Array(Math.floor(data?.items?.length / 2) ?? 3)].map((_, i) => (
           <div
             onClick={() => scrollToSnap?.(i)}
             className={cn(

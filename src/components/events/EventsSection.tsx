@@ -34,8 +34,8 @@ const EventsSection = () => {
                     key={i}
                   >
                     <EventCard
+                      organizer={`/events/organizer-${i}.png`}
                       status="soon"
-                      i={i}
                       className=""
                       image={`/events/${i + 1}.png`}
                       {...item}
@@ -45,8 +45,8 @@ const EventsSection = () => {
                 ) : (
                   <div key={i} className="flex-[0_0_100%] embla__slide">
                     <EventCard
+                      organizer={`/events/organizer-${i}.png`}
                       status="completed"
-                      i={i}
                       className=""
                       image={`/events/${i + 1}.png`}
                       {...item}
@@ -63,8 +63,8 @@ const EventsSection = () => {
           <h2 className="font-64-regular">{title}</h2>
           {items.map((item, i) => (
             <EventCard
+              organizer={`/events/organizer-${i}.png`}
               status="completed"
-              i={i}
               image={`/events/${i + 1}.png`}
               {...item}
               key={i}
