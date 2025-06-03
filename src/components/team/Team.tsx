@@ -4,6 +4,8 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useTeam } from "@/service/use-team";
+import Loader from "../global/Loader";
 
 export const Team = () => {
   const { t } = useTranslation("home");
@@ -43,7 +45,7 @@ export const Team = () => {
     };
   }, [emblaApi]);
 
-  const data = t("about.team", { returnObjects: true }) as {
+  const stats = t("about.team", { returnObjects: true }) as {
     title: string;
     items: {
       name: string;
@@ -53,57 +55,68 @@ export const Team = () => {
     }[];
   };
 
+  const { data, isPending } = useTeam();
+
+  const sortedData = [...(data ?? [])].sort(
+    (a, b) => a?.order_id - b?.order_id
+  );
+
   const btnClassName =
     "size-12 bg-white rounded-full flex items-center justify-center -mt-20 z-20";
 
   return (
     <div className="relative">
       <h3 className="text-gold font-36-medium text-center mb-8">
-        {data.title}
+        {stats.title}
       </h3>
 
-      <div className="flex w-full justify-between items-center translate-y-80 relative z-50">
-        <button
-          disabled={!canScrollPrev}
-          onClick={() => emblaApi?.scrollPrev()}
-          className={cn("top-1/2 -translate-y-1/2 left-0", btnClassName)}
-        >
-          <ChevronLeft color="black" />
-        </button>
+      {isPending ? (
+        <Loader />
+      ) : (
+        <>
+          <div className="flex w-full justify-between items-center translate-y-80 relative z-50">
+            <button
+              disabled={!canScrollPrev}
+              onClick={() => emblaApi?.scrollPrev()}
+              className={cn("top-1/2 -translate-y-1/2 left-0", btnClassName)}
+            >
+              <ChevronLeft color="black" />
+            </button>
 
-        <button
-          disabled={!canScrollNext}
-          onClick={() => emblaApi?.scrollNext()}
-          className={cn("top-1/2 -translate-y-1/2 right-0", btnClassName)}
-        >
-          <ChevronRight color="black" />
-        </button>
-      </div>
+            <button
+              disabled={!canScrollNext}
+              onClick={() => emblaApi?.scrollNext()}
+              className={cn("top-1/2 -translate-y-1/2 right-0", btnClassName)}
+            >
+              <ChevronRight color="black" />
+            </button>
+          </div>
 
-      <div ref={emblaRef} id="team" className="embla overflow-hidden">
-        <div className="embla__container flex gap-4">
-          {data.items.map((item, i) => (
-            <TeamCard
-              {...item}
-              image={`/team/${i + 1}.png`}
-              key={i}
-              className="flex-[0_0_32.5%]"
-            />
-          ))}
-        </div>
-      </div>
+          <div ref={emblaRef} id="team" className="embla overflow-hidden">
+            <div className="embla__container flex gap-4">
+              {sortedData?.map((item, i) => (
+                <TeamCard {...item} key={i} className="flex-[0_0_32.5%]" />
+              ))}
+            </div>
+          </div>
 
-      <div className="flex items-center justify-center gap-2 mt-4">
-        {[...Array(Math.floor(data?.items?.length / 2) ?? 3)].map((_, i) => (
-          <div
-            onClick={() => scrollToSnap?.(i)}
-            className={cn(
-              "w-4 h-1 rounded-full cursor-pointer transition-colors",
-              activeSlide !== i + 1 ? "bg-surfaceContainer" : "bg-onAnySurface"
-            )}
-          />
-        ))}
-      </div>
+          <div className="flex items-center justify-center gap-2 mt-4">
+            {[
+              ...Array(data?.concat.length ? Math.round(data?.length / 3) : 3),
+            ].map((_, i) => (
+              <div
+                onClick={() => scrollToSnap?.(i)}
+                className={cn(
+                  "w-4 h-1 rounded-full cursor-pointer transition-colors",
+                  activeSlide !== i + 1
+                    ? "bg-surfaceContainer"
+                    : "bg-onAnySurface"
+                )}
+              />
+            ))}
+          </div>
+        </>
+      )}
     </div>
   );
 };

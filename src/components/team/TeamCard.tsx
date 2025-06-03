@@ -7,17 +7,17 @@ import { useTranslation } from "react-i18next";
 interface Props {
   className?: string;
   name: string;
-  image: string;
-  speciality: string;
-  bio: string[];
+  image: { path: string };
+  job_title: string;
+  biography: string;
 }
 
 export const TeamCard: FC<Props> = ({
   className,
   name,
-  speciality,
+  job_title,
   image,
-  bio,
+  biography,
 }) => {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const { t } = useTranslation("home");
@@ -32,12 +32,12 @@ export const TeamCard: FC<Props> = ({
       )}
     >
       <div className="size-auto">
-        <img src={image} alt={name} className="size-full object-cover" />
+        <img src={image?.path} alt={name} className="size-full object-cover" />
       </div>
 
       <div className="p-4">
         <h3 className="text-3xl mb-1 text-white">{name}</h3>
-        <h4 className="text-sm mb-4">{speciality}</h4>
+        <h4 className="text-sm mb-4">{job_title}</h4>
         <button
           onClick={() => setIsCollapsed(!isCollapsed)}
           className="flex items-center gap-2"
@@ -63,11 +63,8 @@ export const TeamCard: FC<Props> = ({
               }}
               exit={{ height: 0, opacity: 0, marginTop: 0, gap: 12 }}
               className="flex flex-col w-fit"
-            >
-              {bio.map((text) => (
-                <p key={text}>{text}</p>
-              ))}
-            </motion.div>
+              dangerouslySetInnerHTML={{ __html: biography ?? "" }}
+            />
           )}
         </AnimatePresence>
       </div>

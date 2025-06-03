@@ -182,10 +182,10 @@
 }
 
 .loader {
-  border: 2px solid #fff; /* Light grey */
+  border: 2px solid white; /* Light grey */
   border-top: 2px solid #213a73; /* Blue */
   border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  animation: spin 0.8s ease-in-out infinite;
+  width: 50px;
+  height: 50px;
+  animation: spin 0.8s linear infinite;
 }
