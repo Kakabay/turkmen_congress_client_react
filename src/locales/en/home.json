@@ -39,16 +39,6 @@
           "bio": ["In development"]
         },
         {
-          "name": "Batyr Durdyyev",
-          "speciality": "Business Consultant",
-
-          "bio": [
-            "Batyr Durdyyev has a Bachelor’s degree in Foreign Languages from Turkmen State University and a Postgraduate degree in Business and Management in Emerging Markets from the University of Reading, UK.",
-            "Since 2005, he has served as Founder and CEO of TPS Advertising Agency, overseeing ventures including Tehnika Dunyasi (trading), Turkmen Forum (conferences), and Turkmen Expo (exhibitions), all of which have become key players in their sectors in Turkmenistan",
-            "He is also active in social and professional circles, including the Chess Federation board, alumni networks, and business associations. He speaks Turkmen, Russian, English, and Turkish."
-          ]
-        },
-        {
           "name": "Magtymguly Hojamyradov",
           "speciality": "Government Relations Specialist",
           "bio": [
@@ -61,7 +51,32 @@
         {
           "name": "Oksana Kulagina",
           "speciality": "Manager",
-          "bio": ["In development"]
+          "bio": [
+            "Oksana Kulagina is an expert in HR consulting with over 5 years of experience in recruitment, conducting interviews, competency assessment, and strategic workforce development. She is a certified SET trainer (USAID, OSCE, international embassies and companies). Since 2023, she has been a mentor for the EBRD program for women entrepreneurs in Turkmenistan and an associate member of the SET Consultants Division. Since 2024, she has been working as a sole proprietor and personal growth (soft skills) consultant for women and startups."
+          ]
+        },
+        {
+          "name": "Medina Atdayeva",
+          "speciality": "Project Manager",
+          "bio": [
+            "Medina is an experienced educator and project manager with a strong background in team coordination and curriculum development. With a Bachelor's degree in Languages from Ankara University, she has dedicated her career to fostering educational excellence across various institutions in Turkmenistan and Turkey. ",
+            "She was part of the project management team for the international conference QACIS 2025 (Quality Assurance in Compliance with International Standards in Turkmenistan), where she managed communication among participants, speakers, and representatives from multiple sectors. Her involvement contributed to the efficient preparation and smooth execution of the event. ",
+            "Fluent in Turkmen, English, Russian, and Turkish, Medina collaborates effectively with international partners. With an organized and results-oriented approach, she is committed to delivering impactful projects and fostering strong professional relationships."
+          ]
+        },
+        {
+          "name": "Merjen Seryaeva",
+          "speciality": "Public Relations Specialist",
+          "bio": [
+            "Highly experienced Public Relations Specialist with over 10 years of experience. Effectively manages cross-functional teams, executes projects in publishing, event organization, and administrative activities. Holds a BA (Hons) in Business Management (Cardiff Metropolitan University) and foundation course in business education from West London College. Strong leadership skills, strategic thinking, and teamwork abilities enable successful achievement of goals. Key achievements include leading the editorial process for Lachyn – Inflight Magazine and organizing international events."
+          ]
+        },
+        {
+          "name": "Shemshat Muhammetkulieva",
+          "speciality": "Consultant",
+          "bio": [
+            "A highly accomplished professional in external relations and international marketing, Shemshat Muhammetkulieva currently leads international outreach and partnership efforts at TurkmenExpo—the leading private-sector organizer of international exhibitions and business forums in Turkmenistan. With over 27 years of experience, she has collaborated with global institutions including USAID, UNICEF, the EU, and the German Government. Her prior roles include Country Coordinator for the USAID-funded Safe Migration in Central Asia Program, where she worked closely with national stakeholders on legislative reform and capacity-building for law enforcement. She has led over 300 development initiatives, contributed to key legal reforms, and received specialized training from institutions in the UK, Germany, and the US."
+          ]
         }
       ]
     }
