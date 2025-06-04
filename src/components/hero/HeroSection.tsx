@@ -4,6 +4,8 @@ import { sectionsTranslations } from "@/lib/constants";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
+import Fade from "embla-carousel-fade";
+
 const HeroSection = () => {
   const activeLang = useZusLang((state) => state.activeLang);
   const [emblaRef] = useEmblaCarousel(
@@ -14,6 +16,7 @@ const HeroSection = () => {
       Autoplay({
         delay: 5000,
       }),
+      Fade(),
     ]
   );
 
