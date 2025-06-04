@@ -15,6 +15,7 @@ const HeroSection = () => {
     [
       Autoplay({
         delay: 5000,
+        stopOnInteraction: false,
       }),
       Fade(),
     ]
