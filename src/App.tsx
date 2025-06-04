@@ -1,7 +1,6 @@
 import Header from "./components/header/Header";
 import HeroSection from "./components/hero/HeroSection";
 import EventsSection from "./components/events/EventsSection";
-import PartnersSection from "./components/partners/PartnersSection";
 
 import AboutSection from "./components/about/AboutSection";
 import ContactsSection from "./components/contact/ContactsSection";

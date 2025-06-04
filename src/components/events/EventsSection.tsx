@@ -1,13 +1,10 @@
 import Container from "../global/Container";
-import useEmblaCarousel from "embla-carousel-react";
 import { EventCard } from "./EventCard";
 import { useTranslation } from "react-i18next";
 import { useEvents } from "@/service/use-events";
 import Loader from "../global/Loader";
 
 const EventsSection = () => {
-  const [emblaRef] = useEmblaCarousel({});
-
   const { t } = useTranslation("home");
 
   const { title } = t("events", { returnObjects: true }) as {
