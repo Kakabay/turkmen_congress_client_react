@@ -14,7 +14,7 @@ function App() {
 
       <Header />
 
-      <main className="flex flex-col sm:gap-40 gap-20 w-full" id="home">
+      <main className="flex flex-col sm:gap-24 gap-20 w-full" id="home">
         <HeroSection />
 
         <div id="events" className="-mb-[200px] pt-[100px]"></div>
