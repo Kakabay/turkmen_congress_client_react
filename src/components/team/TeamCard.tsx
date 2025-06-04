@@ -36,7 +36,7 @@ export const TeamCard: FC<Props> = ({
       </div>
 
       <div className="p-4">
-        <h3 className="text-3xl mb-1 text-white">{name}</h3>
+        <h3 className="text-[28px] leading-9 mb-1 text-white">{name}</h3>
         <h4 className="text-sm mb-4">{job_title}</h4>
         <button
           onClick={() => setIsCollapsed(!isCollapsed)}

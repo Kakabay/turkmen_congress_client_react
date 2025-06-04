@@ -95,7 +95,11 @@ export const Team = () => {
           <div ref={emblaRef} id="team" className="embla overflow-hidden">
             <div className="embla__container flex gap-4">
               {sortedData?.map((item, i) => (
-                <TeamCard {...item} key={i} className="flex-[0_0_24%]" />
+                <TeamCard
+                  {...item}
+                  key={i}
+                  className="flex-[0_0_24.2%] h-full"
+                />
               ))}
             </div>
           </div>

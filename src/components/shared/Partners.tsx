@@ -24,7 +24,7 @@ export const Partners = () => {
         <div className="embla__container flex h-[145px] gap-8">
           {data?.map((item, i) => (
             <div
-              className="bg-surfaceContainerLow embla__slide flex-[0_0_290px] h-full p-4"
+              className="bg-surfaceContainerLow embla__slide flex-[0_0_350px] h-full p-4"
               key={i}
             >
               <img
