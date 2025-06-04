@@ -1,15 +1,48 @@
 import { useZusLang } from "@/zustand/use-zus-lang";
 import Container from "../global/Container";
 import { sectionsTranslations } from "@/lib/constants";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 
 const HeroSection = () => {
-  const activeLang = useZusLang().activeLang;
+  const activeLang = useZusLang((state) => state.activeLang);
+  const [emblaRef] = useEmblaCarousel(
+    {
+      loop: true,
+    },
+    [
+      Autoplay({
+        delay: 5000,
+      }),
+    ]
+  );
+
   return (
     <>
       <section
-        className="hero sm:block hidden bg-hero-img w-full h-[996px]"
+        className="hero sm:block hidden  w-full h-[996px] relative overflow-hidden"
         id="hero"
       >
+        <div
+          ref={emblaRef}
+          className="ebmla overfow-hidden absolute top-0 left-0"
+        >
+          <div className="embla__container flex">
+            {[...Array(2)].map((_, i) => (
+              <div
+                key={i}
+                className="embla__slider flex-[0_0_100%] size-full object-cover"
+              >
+                <img
+                  src={`/hero/${i + 1}.jpg`}
+                  alt=""
+                  className="size-full object-cover"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
         <Container>
           <div className="h-[996px] w-full relative flex flex-col justify-end pb-2 gap-2">
             <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[848px] w-full font-80-medium">
