@@ -74,7 +74,7 @@ export const Team = () => {
         <Loader />
       ) : (
         <>
-          <div className="flex w-full justify-between items-center translate-y-80 relative z-50">
+          <div className="flex w-full justify-between items-center translate-y-80 relative z-30">
             <button
               disabled={!canScrollPrev}
               onClick={() => emblaApi?.scrollPrev()}

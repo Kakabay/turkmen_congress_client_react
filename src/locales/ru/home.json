@@ -93,6 +93,10 @@
   },
 
   "partners": {
+    "title": "Партнёры"
+  },
+
+  "GeneralPartners": {
     "title": "Основной партнёр—",
     "items": [
       {

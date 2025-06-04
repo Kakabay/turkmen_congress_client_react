@@ -6,6 +6,7 @@ import AboutSection from "./components/about/AboutSection";
 import ContactsSection from "./components/contact/ContactsSection";
 import Footer from "./components/footer/Footer";
 import LanguageSync from "./lang-sync";
+import { Partners } from "./components/shared/Partners";
 
 function App() {
   return (
@@ -32,6 +33,8 @@ function App() {
         {/* <div id="partners" className="-mb-[200px] pt-[100px]"></div>
 
         <PartnersSection /> */}
+
+        <Partners />
 
         <div id="contact" className="-mb-[200px] pt-[100px]"></div>
 

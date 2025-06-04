@@ -92,6 +92,10 @@
   },
 
   "partners": {
+    "title": "Partners"
+  },
+
+  "GeneralPartners": {
     "title": "General partner—",
     "items": [
       {

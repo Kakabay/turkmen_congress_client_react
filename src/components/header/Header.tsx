@@ -33,7 +33,7 @@ const Header = () => {
 
       <header
         className={cn(
-          "fixed w-full hidden sm:block z-10 top-0 left-0 right-0 transition-all duration-200 ease-in-out",
+          "fixed w-full hidden sm:block z-[50] top-0 left-0 right-0 transition-all duration-200 ease-in-out",
           {
             "bg-transparent text-onAnySurface": !scrollY,
             "bg-backgroundInverse  text-onAnySurfaceInverse": scrollY,

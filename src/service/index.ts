@@ -1,6 +1,7 @@
 import axios from "axios";
 import { Team } from "./types/team.type";
 import { Events } from "./types/events.type";
+import { Partners } from "./types/partners.type";
 
 const axios_url = axios.create({
   baseURL: "https://turkmencongress.com/app/api/v1/",
@@ -22,6 +23,12 @@ export const getEvents = (lang: string) => {
       "Accept-Language": lang,
     },
   });
+
+  return data;
+};
+
+export const getPartners = () => {
+  const data = axios_url.get<Partners>("partners");
 
   return data;
 };
