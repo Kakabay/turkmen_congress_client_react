@@ -95,7 +95,7 @@ export const Team = () => {
           <div ref={emblaRef} id="team" className="embla overflow-hidden">
             <div className="embla__container flex gap-4">
               {sortedData?.map((item, i) => (
-                <TeamCard {...item} key={i} className="flex-[0_0_24.5%]" />
+                <TeamCard {...item} key={i} className="flex-[0_0_24%]" />
               ))}
             </div>
           </div>
@@ -105,6 +105,7 @@ export const Team = () => {
               ...Array(data?.concat.length ? Math.round(data?.length / 3) : 3),
             ].map((_, i) => (
               <div
+                key={i}
                 onClick={() => scrollToSnap?.(i)}
                 className={cn(
                   "w-4 h-1 rounded-full cursor-pointer transition-colors",
