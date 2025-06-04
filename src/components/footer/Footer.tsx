@@ -1,6 +1,6 @@
-import Container from '../global/Container';
-import { useZusLang } from '@/zustand/use-zus-lang';
-import { sectionsTranslations } from '@/lib/constants';
+import Container from "../global/Container";
+import { useZusLang } from "@/zustand/use-zus-lang";
+import { sectionsTranslations } from "@/lib/constants";
 
 const Footer = () => {
   const activeLang = useZusLang().activeLang;
@@ -14,7 +14,7 @@ const Footer = () => {
           </div>
 
           <span className="sm:font-18-regular font-14-regular text-onAnySurfaceVariant">
-            {activeLang.value === 'ru'
+            {activeLang.value === "ru"
               ? sectionsTranslations.ru.footer.rights
               : sectionsTranslations.en.footer.rights}
           </span>

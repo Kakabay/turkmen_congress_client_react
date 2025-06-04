@@ -1,6 +1,7 @@
 export interface LanguageItem {
   name: string;
   link: string;
+  blank?: boolean;
 }
 
 export interface Language {
@@ -20,12 +21,9 @@ export const languages: Languages = {
     view: "Русский",
     items: [
       {
-        name: "Мы предлагаем",
-        link: "#services",
-      },
-      {
-        name: "О нас",
-        link: "#about",
+        name: "О компании",
+        link: "https://turkmencongress.com/app/storage/app/media/Company%20Profile/Company%20Profile_en.pdf",
+        blank: true,
       },
       {
         name: "Связаться с нами",
@@ -38,12 +36,9 @@ export const languages: Languages = {
     view: "English",
     items: [
       {
-        name: "We offer",
-        link: "#services",
-      },
-      {
-        name: "Who we are",
-        link: "#about",
+        name: "Company profile",
+        link: "https://turkmencongress.com/app/storage/app/media/Company%20Profile/Company%20Profile_en.pdf",
+        blank: true,
       },
       {
         name: "Contact us",
@@ -110,12 +105,15 @@ export const sectionsTranslations = {
         "Nielsonsmith is a highly specialized trade compliance focused international organization, working closely with the compliance community to create specialist events that are produced through cooperation with senior executives and leading analysts, to provide real insight from a single point for the industry to move, share ideas and experiences on a neutral platform. We are the compliance conference company.",
     },
     contact: {
-      sectionTitle: "Contact us via our contact form",
+      sectionTitle: "Contact us ",
       description:
         "Contact with us today to discuss opportunities for collaboration to enhance your event planning — whether through speaking engagements, partnerships, or attending our events.",
-      namePlaceholder: "Name",
-      emailPlaceholder: "Email",
-      messagePlaceholder: "Message",
+      nameLabel: "Name",
+      namePlaceholder: "Enter your name",
+      emailLabel: "Email",
+      emailPlaceholder: "Enter your email",
+      messageLabel: "Message",
+      messagePlaceholder: "Enter your message",
       submitButton: "Submit",
     },
     footer: {
@@ -182,9 +180,13 @@ export const sectionsTranslations = {
       sectionTitle: "Свяжитесь с нами",
       description:
         "Свяжитесь с нами прямо сейчас, чтобы обсудить возможность сотрудничества - будь то выступления, партнерство или участие в наших мероприятиях.",
-      namePlaceholder: "Имя",
-      emailPlaceholder: "Эл. почта",
-      messagePlaceholder: "Сообщение",
+      nameLabel: "Имя",
+      namePlaceholder: "Введите ваше имя",
+
+      emailLabel: "Эл. почта",
+      emailPlaceholder: "Введите ваш email",
+      messageLabel: "Сообщение",
+      messagePlaceholder: "Напишите ваше сообщение",
       submitButton: "Отправить",
     },
     footer: {

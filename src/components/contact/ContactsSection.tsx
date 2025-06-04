@@ -40,7 +40,7 @@ const ContactsSection = () => {
                     />
                   </svg>
                   <span className="sm:font-16-regular font-12-regular">
-                    993 63 71 95 88
+                    +993 71 87 18 14
                   </span>
                 </div>
                 <div className="flex sm:items-start items-center gap-4">
@@ -67,9 +67,12 @@ const ContactsSection = () => {
                     />
                   </svg>
 
-                  <span className="sm:font-16-regular font-12-regular">
-                    info@turkmencongress.com
-                  </span>
+                  <a
+                    href="mailto:medina.atdayeva@turkmencongress.com"
+                    className="sm:font-16-regular font-12-regular"
+                  >
+                    medina.atdayeva@turkmencongress.com
+                  </a>
                 </div>
                 <div className="flex sm:items-start items-center gap-4">
                   <svg

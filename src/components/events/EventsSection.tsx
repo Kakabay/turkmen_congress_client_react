@@ -29,8 +29,8 @@ const EventsSection = () => {
           {isPending ? (
             <Loader />
           ) : (
-            <div ref={emblaRef} className="embla">
-              <div className="embla__container flex gap-8">
+            <div className="embla">
+              <div className="embla__container flex flex-col gap-8">
                 {data?.map((item, i) =>
                   i === 2 ? (
                     <a

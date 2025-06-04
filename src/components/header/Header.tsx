@@ -56,6 +56,7 @@ const Header = () => {
               {activeLang.value === "ru"
                 ? languages.russian.items.map((item, i) => (
                     <a
+                      target={item.blank ? "_blank" : ""}
                       key={i}
                       href={item.link}
                       className="font-[450] -tracking-[2%] text-[14px] inline-block py-3 hover:text-onAnySurfaceVariant transition-all duration-200 ease-in-out cursor-pointer"
@@ -65,6 +66,7 @@ const Header = () => {
                   ))
                 : languages.english.items.map((item, i) => (
                     <a
+                      target={item.blank ? "_blank" : ""}
                       key={i}
                       href={item.link}
                       className=" font-[450] -tracking-[2%] text-[14px] inline-block py-3 hover:text-onAnySurfaceVariant transition-all duration-200 ease-in-out cursor-pointer"

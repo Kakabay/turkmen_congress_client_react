@@ -32,7 +32,7 @@ const ContactForm = () => {
   const [mailError, setMailError] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
-  const activeLang = useZusLang((state) => state.activeLang);
+  const lang = useZusLang((state) => state.activeLang.value);
 
   // 2. Define a submit handler.
   async function onSubmit(values: z.infer<typeof formSchema>) {
@@ -83,11 +83,15 @@ const ContactForm = () => {
             control={form.control}
             name={"name"}
             label={
-              activeLang.value === "ru"
+              lang === "ru"
+                ? sectionsTranslations.ru.contact.nameLabel
+                : sectionsTranslations.en.contact.nameLabel
+            }
+            placeholder={
+              lang === "ru"
                 ? sectionsTranslations.ru.contact.namePlaceholder
                 : sectionsTranslations.en.contact.namePlaceholder
             }
-            placeholder={"Murykov Bayram"}
             error={undefined}
             className=""
           />
@@ -95,11 +99,15 @@ const ContactForm = () => {
             control={form.control}
             name={"email"}
             label={
-              activeLang.value === "ru"
+              lang === "ru"
+                ? sectionsTranslations.ru.contact.emailLabel
+                : sectionsTranslations.en.contact.emailLabel
+            }
+            placeholder={
+              lang === "ru"
                 ? sectionsTranslations.ru.contact.emailPlaceholder
                 : sectionsTranslations.en.contact.emailPlaceholder
             }
-            placeholder={"mur.bayram@mail.com"}
             error={undefined}
           />
         </div>
@@ -108,20 +116,20 @@ const ContactForm = () => {
           area
           name={"message"}
           label={
-            activeLang.value === "ru"
-              ? sectionsTranslations.ru.contact.messagePlaceholder
-              : sectionsTranslations.en.contact.messagePlaceholder
+            lang === "ru"
+              ? sectionsTranslations.ru.contact.messageLabel
+              : sectionsTranslations.en.contact.messageLabel
           }
           placeholder={
-            activeLang.value === "ru"
-              ? "Hello! I suggest..."
-              : "Hello! I suggest..."
+            lang === "ru"
+              ? sectionsTranslations.ru.contact.messagePlaceholder
+              : sectionsTranslations.en.contact.messagePlaceholder
           }
           error={undefined}
         />
         <div className="flex flex-col gap-4">
           <Button disabled={isLoading}>
-            {activeLang.value === "ru"
+            {lang === "ru"
               ? isLoading
                 ? "Загрузка..."
                 : sectionsTranslations.ru.contact.submitButton
@@ -131,13 +139,13 @@ const ContactForm = () => {
           </Button>
           {mailSuccess ? (
             <p className="text-gold font-16-regular">
-              {activeLang.value === "ru"
+              {lang === "ru"
                 ? "Ваше сообщение успешно отправленно!"
                 : "Your message has been sent successfully!"}
             </p>
           ) : mailError ? (
             <p className="text-error font-16-regular">
-              {activeLang.value === "ru"
+              {lang === "ru"
                 ? "Ошибка. Попробуйте снова."
                 : "Error. Try again."}
             </p>

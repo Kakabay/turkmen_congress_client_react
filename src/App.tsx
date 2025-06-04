@@ -1,5 +1,4 @@
 import Header from "./components/header/Header";
-import ServicesSection from "./components/services/ServicesSection";
 import HeroSection from "./components/hero/HeroSection";
 import EventsSection from "./components/events/EventsSection";
 import PartnersSection from "./components/partners/PartnersSection";
@@ -23,17 +22,17 @@ function App() {
 
         <EventsSection />
 
-        <div id="services" className="-mb-[200px] pt-[100px]"></div>
+        {/* <div id="services" className="-mb-[200px] pt-[100px]"></div>
 
-        <ServicesSection />
+        <ServicesSection /> */}
 
         <div id="about" className="-mb-[200px] pt-[100px]"></div>
 
         <AboutSection />
 
-        <div id="partners" className="-mb-[200px] pt-[100px]"></div>
+        {/* <div id="partners" className="-mb-[200px] pt-[100px]"></div>
 
-        <PartnersSection />
+        <PartnersSection /> */}
 
         <div id="contact" className="-mb-[200px] pt-[100px]"></div>
 
