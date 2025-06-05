@@ -20,7 +20,7 @@ export const Partners = () => {
         {t("partners.title")}
       </h2>
 
-      <div ref={emblaRef} className="embla">
+      <div ref={emblaRef} className="embla overflow-hidden">
         <div className="embla__container flex h-[145px] gap-8">
           {data?.map((item, i) => (
             <div

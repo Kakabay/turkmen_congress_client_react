@@ -65,7 +65,7 @@ export const Team = () => {
     "size-12 bg-white rounded-full flex items-center justify-center -mt-20 z-20";
 
   return (
-    <div className="relative">
+    <div className="relative overflow-hidden">
       <h3 className="text-gold font-36-medium text-center mb-8">
         {stats.title}
       </h3>
@@ -74,7 +74,7 @@ export const Team = () => {
         <Loader />
       ) : (
         <>
-          <div className="flex w-full justify-between items-center translate-y-80 relative z-30">
+          <div className="md:flex hidden  w-full justify-between items-center translate-y-80 relative z-30">
             <button
               disabled={!canScrollPrev}
               onClick={() => emblaApi?.scrollPrev()}
@@ -92,13 +92,13 @@ export const Team = () => {
             </button>
           </div>
 
-          <div ref={emblaRef} id="team" className="embla overflow-hidden">
+          <div ref={emblaRef} id="team" className="embla">
             <div className="embla__container flex gap-4">
               {sortedData?.map((item, i) => (
                 <TeamCard
                   {...item}
                   key={i}
-                  className="flex-[0_0_24.2%] h-full"
+                  className="lg:flex-[0_0_24.2%] md:flex-[0_0_35%] sm:flex-[0_0_50%] flex-[0_0_75%] h-full"
                 />
               ))}
             </div>

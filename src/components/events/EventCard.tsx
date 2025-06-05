@@ -103,7 +103,7 @@ export const EventCard: FC<Props> = ({
             <span className="font-14-regular text-onAnySurfaceVariant">
               {organizersTitle}
             </span>
-            <div className="h-[64px] w-[221px]">
+            <div className="h-[64px] flex w-[221px]">
               {organizers_image?.map((item, i) => (
                 <img
                   key={i}

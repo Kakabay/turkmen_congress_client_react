@@ -35,7 +35,7 @@ const HeroSection = () => {
           <div className="embla__container flex">
             <div className="embla__slider flex-[0_0_100%] size-full object-cover">
               <img
-                src={`/hero/${1}.jpg`}
+                src="https://turkmencongress.com/app/storage/app/media/surat/surat.jpg"
                 alt=""
                 className="size-full object-cover"
               />
@@ -45,7 +45,7 @@ const HeroSection = () => {
 
         <Container>
           <div className="h-[996px] w-full relative flex flex-col justify-end pb-2 gap-2">
-            <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[848px] w-full font-80-medium">
+            <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[1000px] w-full font-80-medium">
               {t("hero.title")}{" "}
             </h1>
             <div className="flex w-full justify-between items-end">
@@ -88,7 +88,11 @@ const HeroSection = () => {
         </div>
 
         <div className="w-full h-auto">
-          <img src="/hero.png" alt="" className="size-full object-contain" />
+          <img
+            src="https://turkmencongress.com/app/storage/app/media/surat/surat.jpg"
+            alt=""
+            className="size-full object-contain"
+          />
         </div>
       </section>
     </>

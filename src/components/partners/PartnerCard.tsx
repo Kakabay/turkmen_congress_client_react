@@ -25,7 +25,7 @@ export const PartnerCard: FC<Props> = ({
         className
       )}
     >
-      <div className="rounded-[4px] overflow-hidden w-[369px] h-[260px]">
+      <div className="rounded-[4px] overflow-hidden sm:w-[369px] sm:h-[260px] h-[200px] w-[300px]">
         <img
           src={image}
           alt=""
