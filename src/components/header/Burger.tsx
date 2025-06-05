@@ -1,4 +1,3 @@
-import { languages } from "@/lib/constants";
 import { motion } from "framer-motion";
 import LanguageDropdown from "./LanguageDropdown";
 import { useScrollLock } from "usehooks-ts";
@@ -37,6 +36,7 @@ const Burger = ({ setActive }: Props) => {
           {items.map((item, i) => (
             <a
               key={i}
+              target={item.link.includes("https") ? "_blank" : ""}
               href={item.link}
               className="flex text-[20px] leading-[140%] text-white items-center gap-4"
               onClick={() => setActive(false)}
