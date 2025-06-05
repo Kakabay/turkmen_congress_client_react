@@ -11,7 +11,7 @@ const HeroSection = () => {
         id="hero"
       >
         <div className="absolute top-0 left-0 size-full bg-gradient-to-b backdrop-blur-[8%] from-[#0D3767]/0 to-[#0D3767]/20 -z-10" />
-        <div className="overfow-hidden absolute top-0 left-0 -z-20 h-full">
+        <div className="overfow-hidden absolute top-0 left-0 -z-20 h-full w-full">
           <div className="size-full">
             <img
               src="https://turkmencongress.com/app/storage/app/media/surat/surat.jpg"
