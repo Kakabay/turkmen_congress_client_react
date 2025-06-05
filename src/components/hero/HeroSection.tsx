@@ -1,42 +1,21 @@
 import Container from "../global/Container";
-import useEmblaCarousel from "embla-carousel-react";
-import Autoplay from "embla-carousel-autoplay";
-
-import Fade from "embla-carousel-fade";
 import { useTranslation } from "react-i18next";
 
 const HeroSection = () => {
-  const [emblaRef] = useEmblaCarousel(
-    {
-      loop: true,
-    },
-    [
-      Autoplay({
-        delay: 5000,
-        stopOnInteraction: false,
-      }),
-      Fade(),
-    ]
-  );
-
   const { t } = useTranslation("home");
 
   return (
     <>
       <section
-        className="hero sm:block hidden  w-full h-[996px] relative overflow-hidden"
+        className="hero sm:block hidden w-full h-[996px] relative overflow-hidden"
         id="hero"
       >
         <div className="absolute top-0 left-0 size-full bg-gradient-to-b backdrop-blur-[8%] from-[#0D3767]/0 to-[#0D3767]/20 -z-10" />
-        <div
-          ref={emblaRef}
-          className="ebmla overfow-hidden absolute top-0 left-0 -z-20"
-        >
+        <div className="overfow-hidden absolute top-0 left-0 -z-20">
           <div className="embla__container flex">
-            <div className="embla__slider flex-[0_0_100%] size-full object-cover">
+            <div className="size-full object-cover">
               <img
                 src="https://turkmencongress.com/app/storage/app/media/surat/surat.jpg"
-                alt=""
                 className="size-full object-cover"
               />
             </div>
