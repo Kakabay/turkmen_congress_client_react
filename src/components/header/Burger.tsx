@@ -2,19 +2,21 @@ import { languages } from "@/lib/constants";
 import { motion } from "framer-motion";
 import LanguageDropdown from "./LanguageDropdown";
 import { useScrollLock } from "usehooks-ts";
-import { useZusLang } from "@/zustand/use-zus-lang";
+import { useTranslation } from "react-i18next";
 
 interface Props {
   setActive: (value: boolean) => void;
   active: boolean;
 }
 
-// const data = [{}];
-
 const Burger = ({ setActive }: Props) => {
   useScrollLock();
 
-  const activeLang = useZusLang().activeLang;
+  const { t } = useTranslation("home");
+
+  const { items } = t("header", { returnObjects: true }) as {
+    items: { text: string; link: string }[];
+  };
 
   return (
     <motion.div
@@ -32,29 +34,17 @@ const Burger = ({ setActive }: Props) => {
 
       <div className="flex flex-col gap-20 container mt-[30%]">
         <div className="flex flex-col gap-8">
-          {activeLang.value === "en"
-            ? languages.english.items.map((item, i) => (
-                <a
-                  key={i}
-                  href={item.link}
-                  className="flex text-[20px] leading-[140%] text-white items-center gap-4"
-                  onClick={() => setActive(false)}
-                >
-                  <img src="/arrow.svg" />
-                  {item.name}
-                </a>
-              ))
-            : languages.russian.items.map((item, i) => (
-                <a
-                  key={i}
-                  href={item.link}
-                  className="flex text-[20px] leading-[140%] text-white items-center gap-4"
-                  onClick={() => setActive(false)}
-                >
-                  <img src="/arrow.svg" />
-                  {item.name}
-                </a>
-              ))}
+          {items.map((item, i) => (
+            <a
+              key={i}
+              href={item.link}
+              className="flex text-[20px] leading-[140%] text-white items-center gap-4"
+              onClick={() => setActive(false)}
+            >
+              <img src="/arrow.svg" />
+              {item.text}
+            </a>
+          ))}
         </div>
 
         <LanguageDropdown />
