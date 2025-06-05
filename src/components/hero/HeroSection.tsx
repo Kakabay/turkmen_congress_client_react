@@ -1,6 +1,4 @@
-import { useZusLang } from "@/zustand/use-zus-lang";
 import Container from "../global/Container";
-import { sectionsTranslations } from "@/lib/constants";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
@@ -8,7 +6,6 @@ import Fade from "embla-carousel-fade";
 import { useTranslation } from "react-i18next";
 
 const HeroSection = () => {
-  const activeLang = useZusLang((state) => state.activeLang);
   const [emblaRef] = useEmblaCarousel(
     {
       loop: true,

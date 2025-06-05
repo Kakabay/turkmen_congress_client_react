@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
 import CustomField from "../global/CustomField";
 import { useState } from "react";
-import { useZusLang } from "@/zustand/use-zus-lang";
 import { useTranslation } from "react-i18next";
 
 const formSchema = z.object({
@@ -52,8 +51,6 @@ const ContactForm = () => {
   const [mailSuccess, setMailSuccess] = useState<boolean>(false);
   const [mailError, setMailError] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
-
-  const lang = useZusLang((state) => state.activeLang.value);
 
   // 2. Define a submit handler.
   async function onSubmit(values: z.infer<typeof formSchema>) {
