@@ -51,7 +51,7 @@ export const languages: Languages = {
 export const sectionsTranslations = {
   en: {
     hero: {
-      title: "Professional events with a personal touch",
+      title: "Local Potential. Global Partnerships.",
       subtitle: "Make your event innovative: technologies, creative formats.",
       venue: "Turkmenistan, Ashgabat",
       moto: "Make your events: Innovative technologies, creativve formats.",
