@@ -7,27 +7,25 @@ const HeroSection = () => {
   return (
     <>
       <section
-        className="hero sm:block hidden w-full h-[996px] relative overflow-hidden"
+        className="hero sm:block hidden w-full h-screen relative overflow-hidden"
         id="hero"
       >
         <div className="absolute top-0 left-0 size-full bg-gradient-to-b backdrop-blur-[8%] from-[#0D3767]/0 to-[#0D3767]/20 -z-10" />
-        <div className="overfow-hidden absolute top-0 left-0 -z-20">
-          <div className="embla__container flex">
-            <div className="size-full object-cover">
-              <img
-                src="https://turkmencongress.com/app/storage/app/media/surat/surat.jpg"
-                className="size-full object-cover"
-              />
-            </div>
+        <div className="overfow-hidden absolute top-0 left-0 -z-20 h-full">
+          <div className="size-full">
+            <img
+              src="https://turkmencongress.com/app/storage/app/media/surat/surat.jpg"
+              className="size-full object-cover"
+            />
           </div>
         </div>
 
         <Container>
-          <div className="h-[996px] w-full relative flex flex-col justify-end pb-2 gap-2">
+          <div className="h-screen w-full flex flex-col justify-end pb-2 gap-2">
             <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[1000px] w-full font-80-medium">
               {t("hero.title")}{" "}
             </h1>
-            <div className="flex w-full justify-between items-end">
+            <div className="flex w-full absolute bottom-6 justify-between items-end">
               <span className="font-14-regular">{t("hero.venue")}</span>
               <span className="font-18-regular max-w-[518px] w-full">
                 {t("hero.moto")}
@@ -35,7 +33,7 @@ const HeroSection = () => {
             </div>
             <a
               href="#events"
-              className="flex flex-col items-center justify-center mb-10 gap-1"
+              className="flex flex-col absolute -translate-x-1/2 left-1/2 items-center justify-center mb-10 gap-1"
             >
               <svg
                 width="24"
@@ -69,7 +67,6 @@ const HeroSection = () => {
         <div className="w-full h-auto">
           <img
             src="https://turkmencongress.com/app/storage/app/media/surat/surat.jpg"
-            alt=""
             className="size-full object-contain"
           />
         </div>
