@@ -32,18 +32,13 @@ const HeroSection = () => {
           className="ebmla overfow-hidden absolute top-0 left-0"
         >
           <div className="embla__container flex">
-            {[...Array(2)].map((_, i) => (
-              <div
-                key={i}
-                className="embla__slider flex-[0_0_100%] size-full object-cover"
-              >
-                <img
-                  src={`/hero/${i + 1}.jpg`}
-                  alt=""
-                  className="size-full object-cover"
-                />
-              </div>
-            ))}
+            <div className="embla__slider flex-[0_0_100%] size-full object-cover">
+              <img
+                src={`/hero/${1}.jpg`}
+                alt=""
+                className="size-full object-cover"
+              />
+            </div>
           </div>
         </div>
 
@@ -68,7 +63,7 @@ const HeroSection = () => {
             </div>
             <a
               href="#events"
-              className="flex flex-col items-center justify-center gap-1"
+              className="flex flex-col items-center justify-center mb-10 gap-1"
             >
               <svg
                 width="24"
