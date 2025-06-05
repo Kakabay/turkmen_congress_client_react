@@ -11,7 +11,7 @@ const HeroSection = () => {
         id="hero"
       >
         {/* <div className="absolute top-0 left-0 size-full bg-gradient-to-b backdrop-blur-[8%] from-[#0D3767]/0 to-[#0D3767]/20 -z-10" /> */}
-        <div className="absolute top-0 left-0 -z-20 size-full">
+        <div className="absolute top-0 left-0 size-full">
           <img src="/hero/1.jpg" className="size-full object-cover" />
         </div>
 
