@@ -11,13 +11,11 @@ const HeroSection = () => {
         id="hero"
       >
         <div className="absolute top-0 left-0 size-full bg-gradient-to-b backdrop-blur-[8%] from-[#0D3767]/0 to-[#0D3767]/20 -z-10" />
-        <div className="overfow-hidden absolute top-0 left-0 -z-20 h-full w-full">
-          <div className="size-full">
-            <img
-              src="https://turkmencongress.com/app/storage/app/media/surat/surat.jpg"
-              className="size-full object-cover"
-            />
-          </div>
+        <div className="overfow-hidden absolute top-0 left-0 -z-20 size-full">
+          <img
+            src="https://turkmencongress.com/app/storage/app/media/surat/surat.jpg"
+            className="size-full object-cover"
+          />
         </div>
 
         <Container>
@@ -33,7 +31,7 @@ const HeroSection = () => {
             </div>
             <a
               href="#events"
-              className="flex flex-col absolute -translate-x-1/2 left-1/2 items-center justify-center mb-10 gap-1"
+              className="flex flex-col absolute -translate-x-1/2 left-1/2 items-center justify-center gap-1"
             >
               <svg
                 width="24"
