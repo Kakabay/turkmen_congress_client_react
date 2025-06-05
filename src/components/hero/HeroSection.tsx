@@ -25,7 +25,7 @@ const HeroSection = () => {
             <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[1000px] w-full font-80-medium">
               {t("hero.title")}{" "}
             </h1>
-            <div className="flex w-full absolute bottom-6 justify-between items-end">
+            <div className="flex w-full bottom-6 justify-between items-end">
               <span className="font-14-regular">{t("hero.venue")}</span>
               <span className="font-18-regular max-w-[518px] w-full">
                 {t("hero.moto")}
