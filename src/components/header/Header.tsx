@@ -1,17 +1,14 @@
 import Container from "../global/Container";
-import { languages } from "@/lib/constants";
 import LanguageDropdown from "./LanguageDropdown";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { AnimatePresence } from "framer-motion";
-import { useZusLang } from "@/zustand/use-zus-lang";
 import Burger from "./Burger";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
   const [scrollY, setScrollY] = useState(false);
   const [burger, setBurger] = useState(false);
-
-  const activeLang = useZusLang().activeLang;
 
   const handleScroll = () => {
     setScrollY(window.scrollY > 20 ? true : false);
@@ -24,6 +21,12 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const { t } = useTranslation("home");
+
+  const { items } = t("header", { returnObjects: true }) as {
+    items: { text: string; link: string }[];
+  };
 
   return (
     <>
@@ -53,27 +56,16 @@ const Header = () => {
               <LanguageDropdown />
             </div>
             <nav className="flex items-center gap-6">
-              {activeLang.value === "ru"
-                ? languages.russian.items.map((item, i) => (
-                    <a
-                      target={item.blank ? "_blank" : ""}
-                      key={i}
-                      href={item.link}
-                      className="font-[450] -tracking-[2%] text-[14px] inline-block py-3 hover:text-onAnySurfaceVariant transition-all duration-200 ease-in-out cursor-pointer"
-                    >
-                      {item.name}
-                    </a>
-                  ))
-                : languages.english.items.map((item, i) => (
-                    <a
-                      target={item.blank ? "_blank" : ""}
-                      key={i}
-                      href={item.link}
-                      className=" font-[450] -tracking-[2%] text-[14px] inline-block py-3 hover:text-onAnySurfaceVariant transition-all duration-200 ease-in-out cursor-pointer"
-                    >
-                      {item.name}
-                    </a>
-                  ))}
+              {items?.map((item, i) => (
+                <a
+                  target={item.link.includes("https") ? "_blank" : ""}
+                  key={i}
+                  href={item.link}
+                  className="font-[450] -tracking-[2%] text-[14px] inline-block py-3 hover:text-onAnySurfaceVariant transition-all duration-200 ease-in-out cursor-pointer"
+                >
+                  {item.text}
+                </a>
+              ))}
             </nav>
           </div>
         </Container>

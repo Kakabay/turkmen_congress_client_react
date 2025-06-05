@@ -3,18 +3,22 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
-import { useZusLang } from '@/zustand/use-zus-lang';
-import { ChevronDown } from 'lucide-react';
+} from "@/components/ui/dropdown-menu";
+import { useZusLang } from "@/zustand/use-zus-lang";
+import { ChevronDown } from "lucide-react";
 
 const languages = [
   {
-    value: 'ru',
-    view: 'Русский',
+    value: "ru",
+    view: "Русский",
   },
   {
-    value: 'en',
-    view: 'English',
+    value: "en",
+    view: "English",
+  },
+  {
+    value: "tm",
+    view: "Turkmen",
   },
 ];
 
@@ -25,7 +29,9 @@ const LanguageDropdown = () => {
     <div>
       <DropdownMenu modal={false}>
         <DropdownMenuTrigger className="flex gap-[4px] focus:outline-none">
-          <span className="font-14-regular text-inherit">{activeLang.view}</span>{' '}
+          <span className="font-14-regular text-inherit">
+            {activeLang.view}
+          </span>{" "}
           <ChevronDown className="text-inherit" />
         </DropdownMenuTrigger>
         <DropdownMenuContent className="bg-surfaceContainerLow ml-4 border border-surfaceContainerLowOutline p-0 rounded-sm">
@@ -35,7 +41,8 @@ const LanguageDropdown = () => {
               <DropdownMenuItem
                 className="font-14-regular px-2 py-3 hover:bg-transparent focus:bg-transparent hover:text-onAnySurfaceVariant focus:text-onAnySurfaceVariant cursor-pointer "
                 onClick={() => setActiveLang(item)}
-                key={i}>
+                key={i}
+              >
                 {item.view}
               </DropdownMenuItem>
             ))}

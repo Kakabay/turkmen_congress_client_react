@@ -2,26 +2,26 @@
   "header": {
     "items": [
       {
-        "text": "Company profile",
+        "text": "Kompaniýa hakda maglumat",
         "link": "https://turkmencongress.com/app/storage/app/media/Company%20Profile/Company%20Profile_en.pdf"
       },
       {
-        "text": "Contact us",
+        "text": "Biziň salgymyz",
         "link": "/#contact"
       }
     ]
   },
 
   "hero": {
-    "title": "Local Potential. Global Partnerships.",
+    "title": "Her bir çärede özboluşlylyk we ýokary hünär ussatlygy",
     "subtitle": "Make your event innovative: technologies, creative formats.",
-    "venue": "Turkmenistan, Ashgabat",
-    "moto": "Make your events: Innovative technologies, creativve formats.",
-    "btn": "Click here or scroll down"
+    "venue": "Türkmenistan, Aşgabat",
+    "moto": "Türkmen Kongresi ─ Siziň dünýä derejesindäki çäreleri guramakda ygtybarly hyzmatdaşyňyzdyr. Biziň baş maksadymyz ─ Siziň işiňiz üçin täze mümkinçilikleri açmakdyr.",
+    "btn": "Dowamy"
   },
 
   "events": {
-    "title": "Portfolio - events",
+    "title": "Portfolio",
     "organizersTitle": "Organisers:",
     "coOrganizersTitle": "Co-organisers:",
 
@@ -45,15 +45,15 @@
   },
 
   "about": {
-    "title": "Who we are",
+    "title": "Özümiz hakda",
     "texts": [
-      "Turkmen Congress opens up new opportunities for clients who appreciate a quality approach to organising business events. Our company is a new but ambitious player in the market, ready to offer a fresh look, unique ideas and a full range of services for organising and conducting conferences, seminars, forums and congresses of any scale and subject matter.",
-      "We are confidently orientated in the peculiarities of the Turkmen market and know very well what attracts participants from different countries. Our events comply with international quality standards, but at the same time we take into account all cultural and business nuances that are important for our clients. As a reliable partner for companies, Turkmen Congress provides support at every stage of event organisation."
+      "Türkmen Kongresi hojalyk jemgyýeti ─ işewürlik, telekeçilik çärelerini guramakda hil çemeleşmesiniň gymmatyna düşünýän müşderiler üçin täze mümkinçilikleri açýar. Biziň kompaniýamyz täze döredildise-de, eýýäm, bazarda üýtgeşik, döwrebap pikirleri öňe sürýär. Ol islendik tema bagyşlanan maslahatlary, okuw-derslerini, forumlary guramakda we geçirmekde täze garaýyşlaryň, çözgütleriň, ideýalaryň we çemeleşmeleriň tutus toplumyny teklip edýär.",
+      "Biz türkmen bazarynyň ähli aýratynlyklaryny doly nazara alýarys we dürli ýurtlardan gelýän wekilleriň ünsüni özüne çekýän zatlary gowy bilýäris. Biziň geçirýän çärelerimiz halkara hil ülňülerine laýyk gelýär, şol bir wagtyň özünde- de müşderilerimiz üçin möhüm bolan medeni we işewür gyzyklanmalary göz öňünde tutýar. Kompaniýalaryň ygtybarly hyzmatdaşy bolan Türkmen Kongresi çäreleri guramagyň her bir tapgyrynda ýakyndan goldaw bermegi başarýar."
     ],
 
     "team": {
-      "title": "Our team",
-      "button": "Biography",
+      "title": "Biziň toparymyz:",
+      "button": "Biografiýa",
 
       "items": [
         {
@@ -116,7 +116,7 @@
   },
 
   "partners": {
-    "title": "Partners"
+    "title": "Hormatly hyzmatdaşlar"
   },
 
   "GeneralPartners": {
@@ -132,27 +132,26 @@
   },
 
   "contact": {
-    "title": "Contact us",
-    "text": "Contact with us today to discuss opportunities for collaboration to enhance your event planning — whether through speaking engagements, partnerships, or attending our events.",
-    "venue": "Ashgabat cıty, Kopetdag dıstrıct, 1946 (Ankara) street, building 23",
+    "title": "Biz bilen habarlaşyň, aragatnaşyk saklaň!",
+    "text": "Isle çykyş etmäge, isle hyzmatdaşlyga ýa-da biziň çärelerimize gatnaşmaga meýliňiz bolsa, onda, hyzmatdaşlygyň dürli mümkinçiligini ara alyp maslahatlaşmak üçin häziriň özünde bize habar ediň.",
+    "venue": "Aşgabat, Kopetdag etraby, 1946-njy (Ankara), köçe, 23-nji jaý",
 
     "name": {
-      "label": "Name",
-      "placeholder": "Enter your name"
+      "label": "Adyňyz",
+      "placeholder": "Adyňyzy giriziň"
     },
 
     "email": {
-      "label": "Email",
-      "placeholder": "Enter your email"
+      "label": "E-poçta",
+      "placeholder": "E-poçtaňyzy giriziň"
     },
 
     "message": {
-      "label": "Message",
-      "placeholder": "Enter your message"
+      "label": "Habar",
+      "placeholder": "Habaryňyzy giriziň"
     },
-    "button": "Submit",
-    "success": "Your message has been sent successfully!"
+    "button": "Ibermek",
+    "success": "Siziň Habaryňyz iberildi"
   },
-
-  "footer": "2024 © Turkmen Congress. All rights reserved"
+  "footer": "2024 © Türkmen Kongresi. Ähli hukuklaryňyzyň goragy kepillendirilýär"
 }

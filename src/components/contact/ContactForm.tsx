@@ -8,7 +8,7 @@ import { Form } from "@/components/ui/form";
 import CustomField from "../global/CustomField";
 import { useState } from "react";
 import { useZusLang } from "@/zustand/use-zus-lang";
-import { sectionsTranslations } from "@/lib/constants";
+import { useTranslation } from "react-i18next";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -27,6 +27,27 @@ const ContactForm = () => {
       message: "",
     },
   });
+
+  const { t } = useTranslation("home");
+
+  const { name, email, message, button, success } = t("contact", {
+    returnObjects: true,
+  }) as {
+    name: {
+      label: string;
+      placeholder: string;
+    };
+    email: {
+      label: string;
+      placeholder: string;
+    };
+    message: {
+      label: string;
+      placeholder: string;
+    };
+    button: string;
+    success: string;
+  };
 
   const [mailSuccess, setMailSuccess] = useState<boolean>(false);
   const [mailError, setMailError] = useState<boolean>(false);
@@ -82,32 +103,16 @@ const ContactForm = () => {
           <CustomField
             control={form.control}
             name={"name"}
-            label={
-              lang === "ru"
-                ? sectionsTranslations.ru.contact.nameLabel
-                : sectionsTranslations.en.contact.nameLabel
-            }
-            placeholder={
-              lang === "ru"
-                ? sectionsTranslations.ru.contact.namePlaceholder
-                : sectionsTranslations.en.contact.namePlaceholder
-            }
+            label={name.label}
+            placeholder={name.placeholder}
             error={undefined}
             className=""
           />
           <CustomField
             control={form.control}
             name={"email"}
-            label={
-              lang === "ru"
-                ? sectionsTranslations.ru.contact.emailLabel
-                : sectionsTranslations.en.contact.emailLabel
-            }
-            placeholder={
-              lang === "ru"
-                ? sectionsTranslations.ru.contact.emailPlaceholder
-                : sectionsTranslations.en.contact.emailPlaceholder
-            }
+            label={email.label}
+            placeholder={email.placeholder}
             error={undefined}
           />
         </div>
@@ -115,40 +120,18 @@ const ContactForm = () => {
           control={form.control}
           area
           name={"message"}
-          label={
-            lang === "ru"
-              ? sectionsTranslations.ru.contact.messageLabel
-              : sectionsTranslations.en.contact.messageLabel
-          }
-          placeholder={
-            lang === "ru"
-              ? sectionsTranslations.ru.contact.messagePlaceholder
-              : sectionsTranslations.en.contact.messagePlaceholder
-          }
+          label={message.label}
+          placeholder={message.placeholder}
           error={undefined}
         />
         <div className="flex flex-col gap-4">
           <Button disabled={isLoading}>
-            {lang === "ru"
-              ? isLoading
-                ? "Загрузка..."
-                : sectionsTranslations.ru.contact.submitButton
-              : isLoading
-              ? "Loading..."
-              : sectionsTranslations.en.contact.submitButton}
+            {isLoading ? "Loading..." : button}
           </Button>
           {mailSuccess ? (
-            <p className="text-gold font-16-regular">
-              {lang === "ru"
-                ? "Ваше сообщение успешно отправленно!"
-                : "Your message has been sent successfully!"}
-            </p>
+            <p className="text-gold font-16-regular">{success} </p>
           ) : mailError ? (
-            <p className="text-error font-16-regular">
-              {lang === "ru"
-                ? "Ошибка. Попробуйте снова."
-                : "Error. Try again."}
-            </p>
+            <p className="text-error font-16-regular">{"Error. Try again."}</p>
           ) : null}
         </div>
       </form>

@@ -5,6 +5,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
 import Fade from "embla-carousel-fade";
+import { useTranslation } from "react-i18next";
 
 const HeroSection = () => {
   const activeLang = useZusLang((state) => state.activeLang);
@@ -21,15 +22,18 @@ const HeroSection = () => {
     ]
   );
 
+  const { t } = useTranslation("home");
+
   return (
     <>
       <section
         className="hero sm:block hidden  w-full h-[996px] relative overflow-hidden"
         id="hero"
       >
+        <div className="absolute top-0 left-0 size-full bg-gradient-to-b backdrop-blur-[8%] from-[#0D3767]/0 to-[#0D3767]/20 -z-10" />
         <div
           ref={emblaRef}
-          className="ebmla overfow-hidden absolute top-0 left-0"
+          className="ebmla overfow-hidden absolute top-0 left-0 -z-20"
         >
           <div className="embla__container flex">
             <div className="embla__slider flex-[0_0_100%] size-full object-cover">
@@ -45,20 +49,12 @@ const HeroSection = () => {
         <Container>
           <div className="h-[996px] w-full relative flex flex-col justify-end pb-2 gap-2">
             <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[848px] w-full font-80-medium">
-              {activeLang.value === "ru"
-                ? sectionsTranslations.ru.hero.title
-                : sectionsTranslations.en.hero.title}
+              {t("hero.title")}{" "}
             </h1>
             <div className="flex w-full justify-between items-end">
-              <span className="font-14-regular">
-                {activeLang.value === "ru"
-                  ? sectionsTranslations.ru.hero.venue
-                  : sectionsTranslations.en.hero.venue}
-              </span>
+              <span className="font-14-regular">{t("hero.venue")}</span>
               <span className="font-18-regular max-w-[518px] w-full">
-                {activeLang.value === "ru"
-                  ? sectionsTranslations.ru.hero.moto
-                  : sectionsTranslations.en.hero.moto}
+                {t("hero.moto")}
               </span>
             </div>
             <a
@@ -80,9 +76,7 @@ const HeroSection = () => {
                 />
               </svg>
               <span className="text-onAnySurfaceVariant text-[12px] font-medium">
-                {activeLang.value === "ru"
-                  ? sectionsTranslations.ru.hero.btn
-                  : sectionsTranslations.en.hero.btn}
+                {t("hero.btn")}
               </span>
             </a>
           </div>
@@ -91,21 +85,9 @@ const HeroSection = () => {
 
       <section className=" flex flex-col gap-8 items-center sm:hidden pt-8">
         <div className="flex flex-col gap-4 text-center container">
-          <h1 className="font-80-medium">
-            {activeLang.value === "ru"
-              ? sectionsTranslations.ru.hero.title
-              : sectionsTranslations.en.hero.title}
-          </h1>
-          <h4 className="text-[14px]">
-            {activeLang.value === "ru"
-              ? sectionsTranslations.ru.hero.moto
-              : sectionsTranslations.en.hero.moto}
-          </h4>
-          <h5 className="text-[12px] font-medium">
-            {activeLang.value === "ru"
-              ? sectionsTranslations.ru.hero.venue
-              : sectionsTranslations.en.hero.venue}
-          </h5>
+          <h1 className="font-80-medium">{t("hero.title")} </h1>
+          <h4 className="text-[14px]">{t("hero.venue")} </h4>
+          <h5 className="text-[12px] font-medium">{t("hero.moto")} </h5>
         </div>
 
         <div className="w-full h-auto">

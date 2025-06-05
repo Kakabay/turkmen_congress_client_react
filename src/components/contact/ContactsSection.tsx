@@ -1,26 +1,25 @@
 import ContactForm from "./ContactForm";
 import Container from "../global/Container";
-import { useZusLang } from "@/zustand/use-zus-lang";
-import { sectionsTranslations } from "@/lib/constants";
+import { useTranslation } from "react-i18next";
 
 const ContactsSection = () => {
-  const activeLang = useZusLang().activeLang;
+  const { t } = useTranslation("home");
+
+  const { title, text, venue } = t("contact", { returnObjects: true }) as {
+    title: string;
+    text: string;
+    venue: string;
+  };
 
   return (
     <section className="contact bg-surfaceContainer py-4 sm:py-[64px]">
       <Container>
         <div className="flex flex-col sm:gap-8 gap-4">
-          <h2 className="font-64-regular sm:text-left text-center">
-            {activeLang.value === "ru"
-              ? sectionsTranslations.ru.contact.sectionTitle
-              : sectionsTranslations.en.contact.sectionTitle}
-          </h2>
+          <h2 className="font-64-regular sm:text-left text-center">{title} </h2>
           <div className="flex sm:flex-row flex-col sm:text-left text-center justify-between gap-6">
             <div className="flex flex-col gap-10 max-w-[527px] w-full">
               <p className="font-18-regular text-onAnySurfaceVariant">
-                {activeLang.value === "ru"
-                  ? sectionsTranslations.ru.contact.description
-                  : sectionsTranslations.en.contact.description}
+                {text}{" "}
               </p>
               <div className="flex flex-col sm:items-start items-center gap-4 sm:mx-0 mx-auto">
                 <div className="flex items-center gap-4">
@@ -99,9 +98,7 @@ const ContactsSection = () => {
                   </svg>
 
                   <span className="sm:font-16-regular font-12-regular md:!text-left sm:w-[300px] w-[220px]">
-                    {activeLang.value === "ru"
-                      ? "г. Ашхабад, Копетдагский этрап, улица 1946 (Анкара), дом 23"
-                      : "Ashgabat cıty, Kopetdag dıstrıct, 1946 (Ankara) street, building 23"}
+                    {venue}
                   </span>
                 </div>
               </div>

@@ -3,6 +3,7 @@ import { initReactI18next } from "react-i18next";
 
 import homeEn from "./locales/en/home.json";
 import homeRu from "./locales/ru/home.json";
+import homeTm from "./locales/tm/home.json";
 import { useZusLang } from "./zustand/use-zus-lang";
 
 const initialLanguage = useZusLang.getState().activeLang.value;
@@ -14,6 +15,9 @@ i18n.use(initReactI18next).init({
     },
     ru: {
       home: homeRu,
+    },
+    tm: {
+      home: homeTm,
     },
   },
   lng: initialLanguage, // Язык по умолчанию
