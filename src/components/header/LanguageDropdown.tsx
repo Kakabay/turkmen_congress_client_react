@@ -18,7 +18,7 @@ const languages = [
   },
   {
     value: "tm",
-    view: "Turkmen",
+    view: "Türkmen",
   },
 ];
 

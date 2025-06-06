@@ -2,7 +2,7 @@
   "header": {
     "items": [
       {
-        "text": "Kompaniýa hakda maglumat",
+        "text": "Kompaniýa barada maglumat",
         "link": "https://turkmencongress.com/app/storage/app/media/Company%20Profile/Company%20Profile_en.pdf"
       },
       {
@@ -13,7 +13,7 @@
   },
 
   "hero": {
-    "title": "Ýerli mümkinçilikler. <br /> Halkara hyzmatdaşlyklar.",
+    "title": "Ýerli mümkinçilikler. <br /> Bütindünýä hyzmatdaşlyklar.",
     "subtitle": "Make your event innovative: technologies, creative formats.",
     "venue": "Türkmenistan, Aşgabat",
     "moto": "Türkmen Kongresi ─ Siziň dünýä derejesindäki çäreleri guramakda ygtybarly hyzmatdaşyňyzdyr. Biziň baş maksadymyz ─ Siziň işiňiz üçin täze mümkinçilikleri açmakdyr.",
@@ -22,8 +22,8 @@
 
   "events": {
     "title": "Portfolio",
-    "organizersTitle": "Organisers:",
-    "coOrganizersTitle": "Co-organisers:",
+    "organizersTitle": "Guramaçylar:",
+    "coOrganizersTitle": "Bilelikdäki guramaçylar:",
 
     "items": [
       {
@@ -47,8 +47,8 @@
   "about": {
     "title": "Özümiz hakda",
     "texts": [
-      "Türkmen Kongresi hojalyk jemgyýeti ─ işewürlik, telekeçilik çärelerini guramakda hil çemeleşmesiniň gymmatyna düşünýän müşderiler üçin täze mümkinçilikleri açýar. Biziň kompaniýamyz täze döredildise-de, eýýäm, bazarda üýtgeşik, döwrebap pikirleri öňe sürýär. Ol islendik tema bagyşlanan maslahatlary, okuw-derslerini, forumlary guramakda we geçirmekde täze garaýyşlaryň, çözgütleriň, ideýalaryň we çemeleşmeleriň tutus toplumyny teklip edýär.",
-      "Biz türkmen bazarynyň ähli aýratynlyklaryny doly nazara alýarys we dürli ýurtlardan gelýän wekilleriň ünsüni özüne çekýän zatlary gowy bilýäris. Biziň geçirýän çärelerimiz halkara hil ülňülerine laýyk gelýär, şol bir wagtyň özünde- de müşderilerimiz üçin möhüm bolan medeni we işewür gyzyklanmalary göz öňünde tutýar. Kompaniýalaryň ygtybarly hyzmatdaşy bolan Türkmen Kongresi çäreleri guramagyň her bir tapgyrynda ýakyndan goldaw bermegi başarýar."
+      "Turkmen Congress kompaniýasy ─ işewürlik, telekeçilik çärelerini guramakda hil çemeleşmesiniň gymmatyna düşünýän müşderiler üçin täze mümkinçilikleri açýar. Biziň kompaniýamyz täze döredilsede, eýýäm, bazarda täze, döwrebap pikirleri öňe sürýär. Ol islendik tema bagyşlanan maslahatlary, okuw-derslerini, forumlary guramakda we geçirmekde täze garaýyşlaryň, çözgütleriň, ideýalaryň we çemeleşmeleriň tutuş toplumyny teklip edýär.",
+      "Biz türkmen bazarynyň ähli aýratynlyklaryny doly nazara alýarys we dürli ýurtlardan gelýän wekilleriň ünsüni özüne çekýän zatlary gowy bilýäris. Biziň geçirýän çärelerimiz halkara hil ülňülerine laýyk gelýär, şol bir wagtyň özünde- de müşderilerimiz üçin möhüm bolan medeni we işewür gyzyklanmalary göz öňünde tutýar. Kompaniýalaryň ygtybarly hyzmatdaşy bolan Türkmen Kongres kompaniýasy çäreleri guramagyň her bir tapgyrynda ýakyndan goldaw bermegi başarýar."
     ],
 
     "team": {
@@ -116,7 +116,7 @@
   },
 
   "partners": {
-    "title": "Hormatly hyzmatdaşlar"
+    "title": "Hyzmatdaşlar"
   },
 
   "GeneralPartners": {
@@ -132,8 +132,8 @@
   },
 
   "contact": {
-    "title": "Biz bilen habarlaşyň, aragatnaşyk saklaň!",
-    "text": "Isle çykyş etmäge, isle hyzmatdaşlyga ýa-da biziň çärelerimize gatnaşmaga meýliňiz bolsa, onda, hyzmatdaşlygyň dürli mümkinçiligini ara alyp maslahatlaşmak üçin häziriň özünde bize habar ediň.",
+    "title": "Biz bilen habarlaşyň.",
+    "text": "Eger-de siz biziň çärelerimize gatnaşmaga ýa-da çykyş etmäge, hem-de hyzmatdaşlygyň dürli mümkinçiliklerini ara alyp maslahatlaşmak meýliňiz bar bolsa biz bilen habarlaşyp bilersiňiz.",
     "venue": "Aşgabat, Kopetdag etraby, 1946-njy (Ankara), köçe, 23-nji jaý",
 
     "name": {
@@ -153,5 +153,5 @@
     "button": "Ibermek",
     "success": "Siziň Habaryňyz iberildi"
   },
-  "footer": "2024 © Türkmen Kongresi. Ähli hukuklaryňyzyň goragy kepillendirilýär"
+  "footer": "2024 © Türkmen Kongres. Ähli hukuklaryňyzyň goragy kepillendirilen."
 }

@@ -28,22 +28,22 @@ const EventsSection = () => {
           ) : (
             <div className="embla">
               <div className="embla__container flex flex-col gap-8">
-                {data?.map((item, i) =>
-                  i === 2 ? (
-                    <a
-                      href={"https://tkmchess.com.tm/news/60"}
-                      target="_blank"
-                      className="flex-[0_0_100%] embla__slide cursor-pointer"
-                      key={i}
-                    >
-                      <EventCard className="" {...item} />
-                    </a>
-                  ) : (
-                    <div key={i} className="flex-[0_0_100%] embla__slide">
-                      <EventCard className="" {...item} />
-                    </div>
-                  )
-                )}
+                {data?.map((item, i) => (
+                  <a
+                    href={
+                      i === 0
+                        ? "https://turkmenistan.nielsonsmith.com/"
+                        : i === 1
+                        ? "http://qacis.turkmenexpo.com/"
+                        : "https://tkmchess.com.tm/news/60/"
+                    }
+                    target="_blank"
+                    className="flex-[0_0_100%] embla__slide cursor-pointer"
+                    key={i}
+                  >
+                    <EventCard className="" {...item} />
+                  </a>
+                ))}
               </div>
             </div>
           )}
