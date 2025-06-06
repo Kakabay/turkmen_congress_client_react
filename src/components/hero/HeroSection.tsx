@@ -62,15 +62,21 @@ const HeroSection = () => {
 
       <section className=" flex flex-col gap-8 items-center sm:hidden pt-8">
         <div className="flex flex-col gap-4 text-center container">
-          <h1 className="font-80-medium">{t("hero.title")} </h1>
+          <h1
+            className="font-80-medium"
+            dangerouslySetInnerHTML={{ __html: String(t("hero.title")) }}
+          />
           <h4 className="text-[14px]">{t("hero.venue")} </h4>
           <h5 className="text-[12px] font-medium">{t("hero.moto")} </h5>
         </div>
 
         <div className="w-full h-auto">
-          <img
-            src="https://turkmencongress.com/app/storage/app/media/surat/surat.jpg"
-            className="size-full object-contain"
+          <video
+            muted
+            autoPlay
+            loop
+            src="https://qacis.turkmenexpo.com/app/storage/app/media/video/1%20Conference%202025_1.mp4"
+            className="size-full object-cover"
           />
         </div>
       </section>
