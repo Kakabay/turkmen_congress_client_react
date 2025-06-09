@@ -21,10 +21,10 @@ export const Partners = () => {
       </h2>
 
       <div ref={emblaRef} className="embla overflow-hidden">
-        <div className="embla__container flex h-[145px] gap-8">
+        <div className="embla__container flex h-[145px]">
           {data?.map((item, i) => (
             <div
-              className="bg-surfaceContainerLow embla__slide flex-[0_0_350px] h-full p-4"
+              className="bg-surfaceContainerLow embla__slide mr-8  flex-[0_0_350px] h-full p-4"
               key={i}
             >
               <img
