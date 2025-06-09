@@ -8,8 +8,16 @@ export const Partners = () => {
   const [emblaRef] = useEmblaCarousel(
     {
       loop: true,
+      skipSnaps: true,
+      duration: 100,
+      dragFree: true,
     },
-    [Autoplay({})]
+    [
+      Autoplay({
+        delay: 3000,
+        stopOnInteraction: false,
+      }),
+    ]
   );
 
   const { data } = usePartners();
