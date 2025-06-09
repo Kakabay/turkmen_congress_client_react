@@ -11,12 +11,12 @@ const HeroSection = () => {
         id="hero"
       >
         {/* <div className="absolute top-0 left-0 size-full bg-gradient-to-b backdrop-blur-[8%] from-[#0D3767]/0 to-[#0D3767]/20 -z-10" /> */}
-        <div className="absolute top-0 left-0 size-full brightness-[15%]">
+        <div className="absolute top-0 left-0 size-full brightness-[0.7]">
           <video
             muted
             autoPlay
             loop
-            src="https://qacis.turkmenexpo.com/app/storage/app/media/video/1%20Conference%202025_1.mp4"
+            src="/hero/cover.mov"
             className="size-full object-cover"
           />
         </div>
@@ -30,9 +30,9 @@ const HeroSection = () => {
 
             <div className="flex w-full bottom-6 justify-between items-end">
               <span className="font-14-regular">{t("hero.venue")}</span>
-              <span className="font-18-regular max-w-[518px] w-full">
+              {/* <span className="font-18-regular max-w-[518px] w-full">
                 {t("hero.moto")}
-              </span>
+              </span> */}
             </div>
             <a
               href="#events"
@@ -66,8 +66,8 @@ const HeroSection = () => {
             className="font-80-medium"
             dangerouslySetInnerHTML={{ __html: String(t("hero.title")) }}
           />
-          <h4 className="text-[14px]">{t("hero.venue")} </h4>
-          <h5 className="text-[12px] font-medium">{t("hero.moto")} </h5>
+          <h4 className="text-[14px]">{t("hero.venue")}</h4>
+          {/* <h5 className="text-[12px] font-medium">{t("hero.moto")} </h5> */}
         </div>
 
         <div className="w-full h-auto">
