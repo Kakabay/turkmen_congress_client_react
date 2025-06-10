@@ -8,6 +8,7 @@ export interface Item {
   name: string;
   created_at: string; // ISO date string
   updated_at: string;
+  link?: string;
   order_id: number;
   image: Image;
 }
