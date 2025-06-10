@@ -34,7 +34,7 @@ export default function Home() {
       <Partners />
 
       <section className="container">
-        <h2 className="font-64-regular text-center mb-8">{t("newsTitle")}</h2>
+        <h2 className="font-64-regular mb-8">{t("newsTitle")}</h2>
         <div className="grid  md:grid-cols-3 grid-cols-1 gap-6">
           {data?.slice(0, 3).map((item) => (
             <NewsCard {...item} key={item.title} />
