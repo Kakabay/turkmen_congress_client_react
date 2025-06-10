@@ -8,9 +8,11 @@ import Footer from "./components/footer/Footer";
 import LanguageSync from "./lang-sync";
 import { Partners } from "./components/shared/Partners";
 
+import ReactLenis from "lenis/react";
+
 function App() {
   return (
-    <>
+    <ReactLenis root>
       <LanguageSync />
 
       <Header />
@@ -41,7 +43,7 @@ function App() {
         <ContactsSection />
       </main>
       <Footer />
-    </>
+    </ReactLenis>
   );
 }
 
