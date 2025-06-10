@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { AnimatePresence } from "framer-motion";
 import Burger from "./Burger";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [scrollY, setScrollY] = useState(false);
@@ -46,25 +47,25 @@ const Header = () => {
         <Container>
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center gap-8">
-              <a href="/" className="">
+              <Link to="/" className="">
                 {scrollY ? (
                   <img src="/logo-inverse.svg" alt="logo" />
                 ) : (
                   <img src="/congress_logo.svg" alt="logo" />
                 )}
-              </a>
+              </Link>
               <LanguageDropdown />
             </div>
             <nav className="flex items-center gap-6">
               {items?.map((item, i) => (
-                <a
+                <Link
                   target={item.link.includes("https") ? "_blank" : ""}
                   key={i}
-                  href={item.link}
+                  to={item.link}
                   className="font-[450] -tracking-[2%] text-[14px] inline-block py-3 hover:text-onAnySurfaceVariant transition-all duration-200 ease-in-out cursor-pointer"
                 >
                   {item.text}
-                </a>
+                </Link>
               ))}
             </nav>
           </div>
