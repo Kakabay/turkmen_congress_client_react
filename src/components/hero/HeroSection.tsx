@@ -1,23 +1,46 @@
 import Container from "../global/Container";
 import { useTranslation } from "react-i18next";
+import { useRef, useEffect } from "react";
 
 const HeroSection = () => {
   const { t } = useTranslation("home");
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (videoRef.current) {
+        const scrollPosition = window.pageYOffset;
+        // Adjust the 0.3 value to control the parallax speed (lower = slower)
+        videoRef.current.style.transform = `translateY(${
+          scrollPosition * 0.4
+        }px)`;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
       <section
-        className="hero sm:block hidden w-full h-screen relative overflow-hidden"
+        className="hero sm:block hidden w-full h-screen overflow-hidden relative"
         id="hero"
       >
-        {/* <div className="absolute top-0 left-0 size-full bg-gradient-to-b backdrop-blur-[8%] from-[#0D3767]/0 to-[#0D3767]/20 -z-10" /> */}
-        <div className="absolute top-0 left-0 size-full brightness-[0.7]">
+        <div className="absolute top-0 left-0 size-full brightness-[0.7] overflow-hidden">
           <video
+            id="vid"
+            ref={videoRef}
             muted
             autoPlay
             loop
+            playsInline
             src="/hero/cover.mov"
-            className="size-full object-cover"
+            className="size-full object-cover min-h-screen"
+            style={{
+              willChange: "transform", // Optimizes for performance
+              transition: "transform 0.1s ease-out", // Smooths the parallax effect
+            }}
           />
         </div>
 
@@ -30,9 +53,6 @@ const HeroSection = () => {
 
             <div className="flex w-full bottom-6 justify-between items-end">
               <span className="font-14-regular">{t("hero.venue")}</span>
-              {/* <span className="font-18-regular max-w-[518px] w-full">
-                {t("hero.moto")}
-              </span> */}
             </div>
             <a
               href="#events"
@@ -60,14 +80,13 @@ const HeroSection = () => {
         </Container>
       </section>
 
-      <section className=" flex flex-col gap-8 items-center sm:hidden pt-8">
+      <section className="flex flex-col gap-8 items-center sm:hidden pt-8">
         <div className="flex flex-col gap-4 text-center container">
           <h1
             className="font-80-medium"
             dangerouslySetInnerHTML={{ __html: String(t("hero.title")) }}
           />
           <h4 className="text-[14px]">{t("hero.venue")}</h4>
-          {/* <h5 className="text-[12px] font-medium">{t("hero.moto")} </h5> */}
         </div>
 
         <div className="w-full h-auto">
@@ -75,6 +94,7 @@ const HeroSection = () => {
             muted
             autoPlay
             loop
+            playsInline
             src="https://qacis.turkmenexpo.com/app/storage/app/media/video/1%20Conference%202025_1.mp4"
             className="size-full object-cover"
           />

@@ -46,7 +46,7 @@ const Header = () => {
         <Container>
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center gap-8">
-              <a href="#home" className="">
+              <a href="/" className="">
                 {scrollY ? (
                   <img src="/logo-inverse.svg" alt="logo" />
                 ) : (
