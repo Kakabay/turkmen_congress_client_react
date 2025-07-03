@@ -6,10 +6,12 @@ import { AnimatePresence } from "framer-motion";
 import Burger from "./Burger";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { useLenis } from "lenis/react";
 
 const Header = () => {
   const [scrollY, setScrollY] = useState(false);
   const [burger, setBurger] = useState(false);
+  const lenis = useLenis();
 
   const handleScroll = () => {
     setScrollY(window.scrollY > 20 ? true : false);
@@ -59,6 +61,9 @@ const Header = () => {
             <nav className="flex items-center gap-6">
               {items?.map((item, i) => (
                 <Link
+                  onClick={() =>
+                    item.link === "/#contact" ? lenis?.scrollTo("#contact") : {}
+                  }
                   target={item.link.includes("http") ? "_blank" : ""}
                   key={i}
                   to={item.link}

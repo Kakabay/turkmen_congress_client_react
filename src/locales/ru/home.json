@@ -10,6 +10,10 @@
         "link": "https://turkmencongress.com/app/storage/app/media/Company%20Profile/Company%20Profile_ru.pdf"
       },
       {
+        "text": "Вакансии",
+        "link": "/vacancies"
+      },
+      {
         "text": "Связаться с нами",
         "link": "/#contact"
       }

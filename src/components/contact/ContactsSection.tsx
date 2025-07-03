@@ -12,7 +12,10 @@ const ContactsSection = () => {
   };
 
   return (
-    <section className="contact bg-surfaceContainer py-4 sm:py-[64px]">
+    <section
+      id="contact"
+      className="contact bg-surfaceContainer py-4 sm:py-[64px]"
+    >
       <Container>
         <div className="flex flex-col sm:gap-8 gap-4">
           <h2 className="font-64-regular sm:text-left text-center">{title} </h2>

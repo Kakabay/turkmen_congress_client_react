@@ -1,6 +1,5 @@
 import { useTranslation } from "react-i18next";
 import { VacanciesDropdown } from "@/components/shared/VacanciesDropdown";
-import { text } from "stream/consumers";
 
 export const vacanciesData = [
   {
