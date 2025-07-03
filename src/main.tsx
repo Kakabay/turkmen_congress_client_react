@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App.tsx";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Home, News, Error, NewsInner } from "./pages";
+import { Home, News, Error, NewsInner, Vacancies } from "./pages";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +27,10 @@ const router = createBrowserRouter([
         element: <NewsInner />,
         path: "news/:id",
         errorElement: <Error />,
+      },
+      {
+        element: <Vacancies />,
+        path: "vacancies",
       },
     ],
   },

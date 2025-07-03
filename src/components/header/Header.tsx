@@ -59,7 +59,7 @@ const Header = () => {
             <nav className="flex items-center gap-6">
               {items?.map((item, i) => (
                 <Link
-                  target={item.link.includes("https") ? "_blank" : ""}
+                  target={item.link.includes("http") ? "_blank" : ""}
                   key={i}
                   to={item.link}
                   className="font-[450] -tracking-[2%] text-[14px] inline-block py-3 hover:text-onAnySurfaceVariant transition-all duration-200 ease-in-out cursor-pointer"

@@ -110,6 +110,10 @@
 }
 
 @layer base {
+  html {
+    scrollbar-gutter: stable;
+  }
+
   * {
     @apply border-border scroll-smooth;
   }
@@ -163,6 +167,10 @@
 
   .burger-item {
     @apply rounded-[2px] bg-gold h-0.5 w-full;
+  }
+
+  .vacancies-footer a {
+    @apply text-gold;
   }
 
   input:-webkit-autofill,
