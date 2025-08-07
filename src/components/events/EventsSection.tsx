@@ -32,7 +32,7 @@ const EventsSection = () => {
                   <a
                     href={
                       i === 0
-                        ? "https://turkmenistan.nielsonsmith.com/"
+                        ? "https://tif-turkmenistan.com"
                         : i === 1
                         ? "http://qacis.turkmenexpo.com/"
                         : "https://tkmchess.com.tm/news/60/"

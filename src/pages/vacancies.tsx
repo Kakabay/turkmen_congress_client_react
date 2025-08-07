@@ -88,8 +88,8 @@ export default function Vacancies() {
 
   return (
     <section>
-      <div className="text-center bg-gradient-to-b mb-16 from-[#013745] to-[#00171E] h-[320px] flex items-end justify-center font-80-medium">
-        <h1 className="mb-20">{t("vacanciesTitle")}</h1>
+      <div className="text-center bg-gradient-to-b mb-16 from-[#013745] to-[#00171E] md:h-[320px] h-[100px] flex items-end justify-center font-80-medium">
+        <h1 className="md:mb-20">{t("vacanciesTitle")}</h1>
       </div>
 
       <div className="flex flex-col gap-10 max-w-[848px] mx-auto">
