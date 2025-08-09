@@ -18,6 +18,13 @@ const EventsSection = () => {
 
   const { data, isPending } = useEvents();
 
+  const links = [
+    "https://tif-turkmenistan.com",
+    "https://turkmenistan.nielsonsmith.com",
+    "http://qacis.turkmenexpo.com/",
+    "https://tkmchess.com.tm/news/60/",
+  ];
+
   return (
     <section className="events overflow-x-hidden" id="events">
       <Container>
@@ -30,13 +37,7 @@ const EventsSection = () => {
               <div className="embla__container flex flex-col gap-8">
                 {data?.map((item, i) => (
                   <a
-                    href={
-                      i === 0
-                        ? "https://tif-turkmenistan.com"
-                        : i === 1
-                        ? "http://qacis.turkmenexpo.com/"
-                        : "https://tkmchess.com.tm/news/60/"
-                    }
+                    href={links[i]}
                     target="_blank"
                     className="flex-[0_0_100%] embla__slide cursor-pointer"
                     key={i}
